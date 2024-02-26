@@ -1,0 +1,1526 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/compound/2%2C6-dihydroxyethylaminotoluene>
+        a               ont:Compound ;
+        rdfs:label      "2,6-dihydroxyethylaminotoluene" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2%2C6-dihydroxyethylaminotoluene> .
+
+<http://toxin.vub.be/resource/dossier/basic%20yellow%2057>
+        a             ont:Report ;
+        rdfs:label    "basic yellow 57" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_020.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/16> .
+
+<http://toxin.vub.be/resource/compound/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride>
+        a               ont:Compound ;
+        rdfs:label      "alkyl (c16, c18, c22) trimethylammonium chloride" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride> .
+
+<http://toxin.vub.be/resource/compound/hc%20yellow%20n°%207>
+        a               ont:Compound ;
+        rdfs:label      "hc yellow n° 7" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%207> .
+
+<http://toxin.vub.be/resource/compound/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate>
+        a               ont:Compound ;
+        rdfs:label      "2,5,6-triamino-4-pyrimidinol sulfate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate> .
+
+<http://toxin.vub.be/resource/compound/2-amino-4-hydroxyethylaminoanisole%20sulfate>
+        a               ont:Compound ;
+        rdfs:label      "2-amino-4-hydroxyethylaminoanisole sulfate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2-amino-4-hydroxyethylaminoanisole%20sulfate> .
+
+<http://toxin.vub.be/resource/compound/HC%20Blue%20n°%2014>
+        a               ont:Compound ;
+        rdfs:label      "HC Blue n° 14" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/HC%20Blue%20n°%2014> .
+
+<http://toxin.vub.be/resource/dossier/2%2C6-dihydroxyethylaminotoluene>
+        a             ont:Report ;
+        rdfs:label    "2,6-dihydroxyethylaminotoluene" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_188.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/22> , <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/9> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/15>
+        a                               ont:Test ;
+        ont:additional_information      "taken from sccnfp/0784/04" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/basic%20violet%202> ;
+        ont:compoundLabel               "basic violet 2" ;
+        ont:dossier                     "basic violet 2" ;
+        ont:endpointsXconclusion        "the oral LD50 in rats exceeded 2000 mg/kg bw." ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmortality_rate_in_females
+                "at 2000 mg/kg bw, 1 female died within 48 hours of dosing. no mortalities at lower dose levels. " ;
+        ont:endpointsXmortality_rate_in_males
+                "at 2000 mg/kg bw, 1 male died within 48 hours of dosing. No mortalities at lower dose levels. " ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "clinical signs at 2000 mg/kg bw: piloerection, reduced activity, hunched posture, breathing difficulties, staining of fur, urine and faeces, swollen abdomen. " ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "clinical signs at 2000 mg/kg bw: piloerection, reduced activity, hunched posture, breathing difficulties, staining of fur, urine and faeces, swollen abdomen. " ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_066.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "15" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/sprague dawley hsd: sd" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "500, 1000, 2000 " ;
+        ont:test_methodXtest_conditionXvehicleXconcentration
+                "0.5" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "cmc aqueous solution" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "GST 063-01/41-06" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/2-amino-4-hydroxyethylaminoanisole%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "2-amino-4-hydroxyethylaminoanisole sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health//sites/health/files/scientific_committees/consumer_safety/opinions/sccs_o_003.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/10> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/4>
+        a                               ont:Test ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/hc%20yellow%20n°%204> ;
+        ont:compoundLabel               "hc yellow n° 4" ;
+        ont:dossier                     "hc yellow n° 4" ;
+        ont:endpointsXconclusion        "no mortalities occurred at the dose of 5 g/kg bw. yellow colorations of the skin and mucosae were observed until the fourth day after administration of the tested dose. no other signs of reaction to treatment were observed." ;
+        ont:endpointsXld50              "> 5000" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "during the observation period of 14 days, a record was kept for mortalities and signs of toxicity. body weights were recorded on day 0 and day 14 for the surviving animals. all rats that died were investigated macroscopically to identify organ changes in the skull, thorax and abdomen and surviving animals were similarly examined at the end of the 14- day post-observation." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "during the observation period of 14 days, a record was kept for mortalities and signs of toxicity. body weights were recorded on day 0 and day 14 for the surviving animals. all rats that died were investigated macroscopically to identify organ changes in the skull, thorax and abdomen and surviving animals were similarly examined at the end of the 14- day post-observation." ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_008.pdf" ;
+        ont:reliabilityXglp             "no" ;
+        ont:reliabilityXklimisch_score  "3" ;
+        ont:reliabilityXpreliminary_study
+                "hc yellow n°4 was prepared as a 50 % suspension in distilled water and administered by oral intubation at the doses of 1, 2.5 and 5 g/kg bw in range finding test (2 males per dose). as no mortalities occurred at these doses, 5 g/kg bw was chosen for the primary test (5 males and 5 females). " ;
+        ont:reliabilityXref_in_dossier  "2" ;
+        ont:reliabilityXyear            "1985" ;
+        ont:test_methodXtest_animalsXhousing_and_feeding
+                "starved 16h before treatment" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f&m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat /bor: wisw spf tno" ;
+        ont:test_methodXtest_animalsXweightXfemale_mean_weight_value
+                "155-193" ;
+        ont:test_methodXtest_animalsXweightXmale_mean_weight_value
+                "193-209" ;
+        ont:test_methodXtest_animalsXweightXmean_weight_unit
+                "g" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "5000" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "intubation" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "distilled water" ;
+        ont:test_methodXtest_substanceXcomposition
+                "aqueous suspension" ;
+        ont:test_methodXtest_substanceXconcentration
+                "50" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%207>
+        a             ont:Report ;
+        rdfs:label    "hc yellow n° 7" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_032.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/8> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/22>
+        a                               ont:Test ;
+        ont:additional_information      "a limit test. the method used followed oecd guideline n° 401 (1981), referenced as method b1 in commission cirective 84/449/eec. " ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/2%2C6-dihydroxyethylaminotoluene> ;
+        ont:compoundLabel               "2,6-dihydroxyethylaminotoluene" ;
+        ont:dossier                     "2,6-dihydroxyethylaminotoluene" ;
+        ont:endpointsXconclusion        "LD50 of the test compound was found to be greater than 2000 mg/kg bw in rats." ;
+        ont:endpointsXld50              ">2000" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "all animals showed the expected gain in bodyweight during the study. hunched posture and lethargy were noted in all animals on the day of dosing." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "all animals showed the expected gain in bodyweight during the study. hunched posture and lethargy were noted in all animals on the day of dosing." ;
+        ont:endpointsXobservationsXgross_pathology_in_females
+                "no abnormalities were noted at necropsy." ;
+        ont:endpointsXobservationsXgross_pathology_in_males
+                "no abnormalities were noted at necropsy." ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_188.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "1 (submission 1)" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/sprague-dawley" ;
+        ont:test_methodXtest_animalsXweightXfemale_mean_weight_value
+                "129-140" ;
+        ont:test_methodXtest_animalsXweightXmale_mean_weight_value
+                "140-152" ;
+        ont:test_methodXtest_animalsXweightXmean_weight_unit
+                "g" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "2000" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: a 138" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "#2" ;
+        ont:test_methodXtest_substanceXcomposition
+                "test substance as a suspension in distilled water" ;
+        ont:test_methodXtest_substanceXphysical_form
+                "solution" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/compound/hc%20yellow%20n°%2013>
+        a               ont:Compound ;
+        rdfs:label      "hc yellow n° 13" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%2013> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/9>
+        a                               ont:Test ;
+        ont:additional_information      "a limit test. the method used followed oecd guideline n° 401 (1981), referenced as method b1 in commission cirective 84/449/eec. " ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/2%2C6-dihydroxyethylaminotoluene> ;
+        ont:compoundLabel               "2,6-dihydroxyethylaminotoluene" ;
+        ont:dossier                     "2,6-dihydroxyethylaminotoluene" ;
+        ont:endpointsXconclusion        "LD50 of the test compound was found to be greater than 2000 mg/kg bw in rats." ;
+        ont:endpointsXld50              ">2000" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "they were observed for 14 days after the day of dosing and were then killed for gross pathological examination. there were no mortalities and all animals showed the expected gain in bodyweight during the study. hunched posture and lethargy were noted in all animals on the day of dosing." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "they were observed for 14 days after the day of dosing and were then killed for gross pathological examination. there were no mortalities and all animals showed the expected gain in bodyweight during the study. hunched posture and lethargy were noted in all animals on the day of dosing." ;
+        ont:endpointsXobservationsXgross_pathology_in_females
+                "no abnormalities were noted at necropsy." ;
+        ont:endpointsXobservationsXgross_pathology_in_males
+                "no abnormalities were noted at necropsy." ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_188.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "1 (submission 1)" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/sprague-dawley" ;
+        ont:test_methodXtest_animalsXweightXfemale_mean_weight_value
+                "129-140" ;
+        ont:test_methodXtest_animalsXweightXmale_mean_weight_value
+                "140-152" ;
+        ont:test_methodXtest_animalsXweightXmean_weight_unit
+                "g" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "2000" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: a 138" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "#2" ;
+        ont:test_methodXtest_substanceXcomposition
+                "test material as a suspension in distilled water" ;
+        ont:test_methodXtest_substanceXphysical_form
+                "solution" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/compound/methylimidazoliumpropyl%20p-phenylenediamine%20HCl>
+        a               ont:Compound ;
+        rdfs:label      "methylimidazoliumpropyl p-phenylenediamine HCl" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/methylimidazoliumpropyl%20p-phenylenediamine%20HCl> .
+
+<http://toxin.vub.be/resource/dossier/phenoxyethanol>
+        a             ont:Report ;
+        rdfs:label    "phenoxyethanol" ;
+        rdfs:seeAlso  <http://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_195.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/1> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/14>
+        a                               ont:Test ;
+        ont:additional_information      "taken from sccnfp/0784/04" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/basic%20violet%202> ;
+        ont:compoundLabel               "basic violet 2" ;
+        ont:dossier                     "basic violet 2" ;
+        ont:endpointsXconclusion        "the oral LD50 in rats exceeded 2000 mg/kg bw." ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmortality_rate_in_males
+                "3 males died within 5 days of dosing." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "clinical signs: piloerection, breathing difficulties, staining of fur, urine and faeces." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "clinical signs: piloerection, breathing difficulties, staining of fur, urine and faeces." ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_066.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXlimit_test      "limit test" ;
+        ont:reliabilityXref_in_dossier  "15" ;
+        ont:reliabilityXyear            "2002" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/sprague dawley hsd: sd" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "2000" ;
+        ont:test_methodXtest_conditionXvehicleXconcentration
+                "0.5" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "cmc aqueous solution" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "GST 063-01/41-06" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/3>
+        a                               ont:Test ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/methylimidazoliumpropyl%20p-phenylenediamine%20HCl> ;
+        ont:compoundLabel               "methylimidazoliumpropyl p-phenylenediamine HCl" ;
+        ont:dossier                     "methylimidazoliumpropyl p-phenylenediamine HCl" ;
+        ont:endpointsXconclusion        "under the conditions of this study, no clinical signs and no deaths were observed after a single oral administration of methylimidazoliumpropyl p-phenylenediamine, Cl, 2HCl (A166) at the dose level of 500 mg/kg in rats." ;
+        ont:endpointsXld50              "> 500" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "animals were observed at least daily for clinical signs and twice daily for mortality. body weights were recorded on day 1 just before treatment and on days 5 and 8. animals found dead or killed prematurely and all surviving animals killed at the end of the study were subjected to macroscopic examination. organs showing gross anomalies were sampled and preserved, but no histopathological examination was performed. neither mortality nor clinical signs were observed during the study." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "animals were observed at least daily for clinical signs and twice daily for mortality. body weights were recorded on day 1 just before treatment and on days 5 and 8. animals found dead or killed prematurely and all surviving animals killed at the end of the study were subjected to macroscopic examination. organs showing gross anomalies were sampled and preserved, but no histopathological examination was performed. neither mortality nor clinical signs were observed during the study." ;
+        ont:endpointsXobservationsXmicroscopic_pathology_in_females
+                "microscopic examination of the main organs of the animals revealed no apparent abnormalities." ;
+        ont:endpointsXobservationsXmicroscopic_pathology_in_males
+                "microscopic examination of the main organs of the animals revealed no apparent abnormalities." ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/sites/health/files/scientific_committees/consumer_safety/docs/sccs_o_231.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "de jouffrey" ;
+        ont:reliabilityXsccs_comment_to_test
+                "animals were observed until day 8 instead of for 14 days, but since no mortality was registered, it can be deduced that the oral LD50 is higher than 500 mg/kg b.w" ;
+        ont:reliabilityXyear            "1997" ;
+        ont:test_methodXtest_animalsXhousing_and_feeding
+                "fasted overnight" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "6" ;
+        ont:test_methodXtest_animalsXsex
+                "f &m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/sprague-dawley" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "500" ;
+        ont:test_methodXtest_conditionXdose_volume
+                "10" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "8" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "purified water" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: c16778" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "rf006" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/compound/β-arbutin>
+        a               ont:Compound ;
+        rdfs:label      "β-arbutin" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/β-arbutin> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/21>
+        a                               ont:Test ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/2%2C4-diaminophenoxyethanol%20dihydrochloride%20and%20sulfate> ;
+        ont:compoundLabel               "2,4-diaminophenoxyethanol dihydrochloride and sulfate" ;
+        ont:dossier                     "2,4-diaminophenoxyethanol dihydrochloride and sulfate" ;
+        ont:endpointsXconclusion        "under the experimental conditions, the LD50 of the test item was close to 1000 mg/kg bw, since a single dose of 1000 mg/kg bw induces death in 1/5 male and 3/5 female rats." ;
+        ont:endpointsXld50              "≈ 1000" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmortality_rate_in_females
+                "two females were found dead on day 2, another female died on day 1 after a lateral recumbency and tonic-clonic convulsions " ;
+        ont:endpointsXmortality_rate_in_males
+                "one male was found dead on day 2" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "hypoactivity or sedation and piloerection were noted in all animals on day 1. lateral recumbency and tonic-clonic convulsions were also observed in two animals on day 1, one of these animals was found dead a few hours later. hypoactivity or sedation and piloerection persisted in the surviving animals up to day 3 or 4; dyspnoea and unsteady gait were recorded in the surviving females up to day 3. body weight gain in surviving animals was not affected by treatment with the test substance. no apparent abnormalities were observed at necropsy in all animals." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "hypoactivity or sedation and piloerection were noted in all animals on day 1. lateral recumbency and tonic-clonic convulsions were also observed in two animals on day 1. hypoactivity or sedation and piloerection persisted in the surviving animals up to day 3 or 4.  body weight gain in surviving animals was not affected by treatment with the test substance. no apparent abnormalities were observed at necropsy in all animals." ;
+        ont:endpointsXobservationsXgross_pathology_in_females
+                "no apparent abnormalities were observed at necropsy in all animals." ;
+        ont:endpointsXobservationsXgross_pathology_in_males
+                "no apparent abnormalities were observed at necropsy in all animals." ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_035.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "1" ;
+        ont:test_methodXtest_animalsXhousing_and_feeding
+                "fasted" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/ sprague dawley ico:ofa-sd (iops caw)" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "1000" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: imexine oaj, test substance 2952 " ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "101297" ;
+        ont:test_methodXtest_substanceXpurity
+                "99.6" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%2013>
+        a             ont:Report ;
+        rdfs:label    "hc yellow n° 13" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_044.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/5> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/19>
+        a                               ont:Test ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/hydroxyethyl-p-phenylenediamine%20sulfate> ;
+        ont:compoundLabel               "hydroxyethyl-p-phenylenediamine sulfate" ;
+        ont:dossier                     "hydroxyethyl-p-phenylenediamine sulfate" ;
+        ont:endpointsX95_confidence_interval
+                "71-89" ;
+        ont:endpointsXconclusion        "under the experimental conditions of this study, the LD50 was 80 mg/kg bw (71-89 mg/kg bw 95% CI), calculated for both sexes combined." ;
+        ont:endpointsXld50              "80" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmortality_rate_in_females
+                "all dead in the 112 or 200mg/kg bw. death occurred between 1 hr-4 days in the 112 mg/kg bw group and between 30 min-2 hr in the 200 mg/kg bw group. 1/10 of the animals in the 63 mg/kg bw died within 4 hr post administration." ;
+        ont:endpointsXmortality_rate_in_males
+                "all dead in the 112 or 200mg/kg bw. death occurred between 1 hr-4 days in the 112 mg/kg bw group and between 30 min-2 hr in the 200 mg/kg bw group. 1/10 of the animals in the 63 mg/kg bw died within 4 hr post administration." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "no effects on body weight and body weight gain were observed. all animals showed signs of malaise (e.g. decreased motor activity, ruffled fur, closed eyes, hunched posture, decreased muscular tension or unconsciousness). in some animals ataxia, dyspnoea or low grade convulsions were observed. effects diminished and returned to normal within 6hr – 1wk post administration." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "no effects on body weight and body weight gain were observed. all animals showed signs of malaise (e.g. decreased motor activity, ruffled fur, closed eyes, hunched posture, decreased muscular tension or unconsciousness). in some animals ataxia, dyspnoea or low grade convulsions were observed. effects diminished and returned to normal within 6hr – 1wk post administration." ;
+        ont:endpointsXobservationsXgross_pathology_in_females
+                "7/20 of the animals that died early did not show any clinical signs at the post-mortem examination. most of the other animals that died early showed signs of shock due to severe gastrointestinal irritations or hepatotoxicity" ;
+        ont:endpointsXobservationsXgross_pathology_in_males
+                "7/20 of the animals that died early did not show any clinical signs at the post-mortem examination. most of the other animals that died early showed signs of shock due to severe gastrointestinal irritations or hepatotoxicity" ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_017.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXpreliminary_study
+                "the dosage-range was based on a preliminary study, in which all animals (4/4) died after receiving 200 or 2000 mg/kg bw hydroxyethyl-p-phenylenediamine. " ;
+        ont:reliabilityXref_in_dossier  "18" ;
+        ont:reliabilityXyear            "1990" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "mouse/him:ofi" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "20, 36, 63, 112, 200 " ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: hydroxyethyl-p-phenylenediamine (1,4-diamino-2-ßhydroxyethylbenzene-sulfate)" ;
+        ont:test_methodXtest_substanceXcomposition
+                "test substance dissolved in the veicle" ;
+        ont:test_methodXtest_substanceXpurity
+                "> 98" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/8>
+        a                               ont:Test ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/hc%20yellow%20n°%207> ;
+        ont:compoundLabel               "hc yellow n° 7" ;
+        ont:dossier                     "hc yellow n° 7" ;
+        ont:endpointsXconclusion        "moderately toxic following a single oral administration. the results of the test indicated that the maximal non-lethal oral dose was 50 mg/kg in female rats and the minimal lethal dose was 500 mg/kg bw. 500 mg/kg bw is considered close to the median lethal dose (LD50)." ;
+        ont:endpointsXld50              "500" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmortality_rate_in_females
+                "at 500 mg/kg bw, 3 of the 5 female rats died on day 2. piloerection and orange-colored extremities were observed prior to death." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "during the observation period of 14 days, a record was kept for mortalities and signs of toxicity. body weights were recorded on day 1 and then on days 8 and 15 for the surviving animals. surviving animals showed piloerection on day 1 or until day 3 (together with dyspnea and reduce activity for the latter rat). no mortalities and no clinical signs were observed at 50 mg/kg bw. no effect on the body weight was recorded in the surviving rats given 500 mg/kg bw. at 50 mg/kg bw, a reduced body weight gain was noted in 1/5 females during the first week of the study and in 1/5 females during the second week of the study when compared to historical control animals. " ;
+        ont:endpointsXobservationsXgross_pathology_in_males
+                "all rats that died were investigated macroscopically to identify organ changes in the skull, thorax and abdomen and surviving animals were similarly examined at the end of the 14-day post-observation. at necropsy, no apparent abnormalities were observed in any animal.  " ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_032.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXlimit_test      "one female was given 500 mg/kg preceded the definitive test. hypoactivity, dyspnea and piloerection were observed from day 1 to day 3 in the animal given 500 mg/kg bw. " ;
+        ont:reliabilityXref_in_dossier  "1" ;
+        ont:reliabilityXyear            "2005" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "5" ;
+        ont:test_methodXtest_animalsXsex
+                "f" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/sprague-dawley" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "50, 500 " ;
+        ont:test_methodXtest_conditionXdose_volume
+                "10" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "intubation" ;
+        ont:test_methodXtest_conditionXvehicleXconcentration
+                "0.5" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "carboxymethylcellulose" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "0509831" ;
+        ont:test_methodXtest_substanceXphysical_form
+                "solid" ;
+        ont:test_methodXtest_substanceXpurity
+                "97.3" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/13>
+        a                               ont:Test ;
+        ont:additional_information      "only 800 and 2000mg /kg bw tested in males. regarding glp compliance:   only report was audited, not the study itself. oecd tg 401, annex 5 to dir. 67/548/eec, method b.1: acute oral toxicity" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride> ;
+        ont:compoundLabel               "alkyl (c16, c18, c22) trimethylammonium chloride" ;
+        ont:dossier                     "alkyl (c16, c18, c22) trimethylammonium chloride" ;
+        ont:endpointsXconclusion        "the study authors calculated a LD50 value of 702.5 mg/kg bw for female rats using the probit method, whereas the LD50 value in males could not be calculated. " ;
+        ont:endpointsXld50_female       "702.5" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmortality_rate_in_females
+                "except for one male and one female that were found dead on days 4 and 7, respectively, all deaths occurred within the first day. at 630 mg/kg bw: 2/5, at 800mg/kg bw: 3/5, at 1250 mg/kg bw: 5/5, at 2000 mg/kg bw: 5/5" ;
+        ont:endpointsXmortality_rate_in_males
+                "except for one male and one female that were found dead on days 4 and 7, respectively, all deaths occurred within the first day. at 630 mg/kg bw: not tested, at 800mg/kg bw: 0/5, at 1250 mg/kg bw: not tested, at 2000 mg/kg bw: 5/5" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "the following clinical signs occurred at all dose levels during the first days after administration: squatting posture, sunken flanks, bristled coat, stilted and uncoordinated gait, half-closed eyes, irregular respiration, swollen abdomen, and diarrhoea. additionally, ataxia was observed in animals of the 2000 mg/kg bw group. all symptoms had completely disappeared by day 8. body weight development was not impaired." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "the following clinical signs occurred at all dose levels during the first days after administration: squatting posture, sunken flanks, bristled coat, stilted and uncoordinated gait, half-closed eyes, irregular respiration, swollen abdomen, and diarrhoea. additionally, ataxia was observed in animals of the 2000 mg/kg bw group. all symptoms had completely disappeared by day 8. body weight development was not impaired." ;
+        ont:endpointsXobservationsXmicroscopic_pathology_in_females
+                "animals that had died during the study showed inflated stomach, detachment of the stomach mucosa and petechial bleedings, small intestinal containing yellowish mucous or clear fluid, detachment of intestinal mucosa, mucosal bleeding. no macroscopic alterations were observed in rats that survived until the end of the observation period. " ;
+        ont:endpointsXobservationsXmicroscopic_pathology_in_males
+                "animals that had died during the study showed inflated stomach, detachment of the stomach mucosa and petechial bleedings, small intestinal containing yellowish mucous or clear fluid, detachment of intestinal mucosa, mucosal bleeding. no macroscopic alterations were observed in rats that survived until the end of the observation period. " ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_012.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "3" ;
+        ont:reliabilityXref_in_dossier  "9" ;
+        ont:reliabilityXyear            "1996" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/wistar" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "630, 800, 1250, 2000 " ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: genamin stac (79.2% steartrimonium chloride, 19.1% isopropanol and 0.9% water) " ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "1061969521" ;
+        ont:test_methodXtest_substanceXpurity
+                "79.2" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/β-arbutin>
+        a             ont:Report ;
+        rdfs:label    "β-arbutin" ;
+        rdfs:seeAlso  <http://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_169.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/2> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/2>
+        a                               ont:Test ;
+        ont:additional_information      "2 species" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/β-arbutin> ;
+        ont:compoundLabel               "β-arbutin" ;
+        ont:dossier                     "β-arbutin" ;
+        ont:endpointsXconclusion        "low level of acute oral toxicity in both rat and mouse" ;
+        ont:endpointsXld50              "8715; 9804" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmortality_rate_in_females
+                "in rats at 1792 (mg/kg bw) :0/5, 2509 (mg/kg bw) :0/5, 3513 (mg/kg bw): 0/5, 4919 (mg/kg bw): 0/5, 6886 (mg/kg bw): 1/5, 9641 (mg/kg bw): 3/5, 13496 (mg/kg bw): 4/5, 18895 (mg/kg bw): 5/5; in mice 1792 (mg/kg bw) :0/5, 2509 (mg/kg bw) :0/5, 3513 (mg/kg bw): 0/5, 4919 (mg/kg bw): 0/5, 6886 (mg/kg bw): * 1/4, 9641 (mg/kg bw): 3/5, 13496 (mg/kg bw): 3/5, 18895 (mg/kg bw): 5/5. * one of the five 6886 mg/kg bw female mice died by gavage accident" ;
+        ont:endpointsXmortality_rate_in_males
+                "in rats at 1792 (mg/kg bw) :0/5, 2509 (mg/kg bw) :0/5, 3513 (mg/kg bw): 0/5, 4919 (mg/kg bw): 0/5, 6886 (mg/kg bw): 2/5, 9641 (mg/kg bw): 3/5, 13496 (mg/kg bw): 4/5, 18895 (mg/kg bw): 5/5; in mice: 1792 (mg/kg bw) :0/5, 2509 (mg/kg bw) :0/5, 3513 (mg/kg bw): 0/5, 4919 (mg/kg bw): 1/5, 6886 (mg/kg bw): 1/5, 9641 (mg/kg bw): 1/5, 13496 (mg/kg bw): 3/5, 18895 (mg/kg bw): 5/5" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "the animals were checked daily for mortality and clinical signs. body weights were recorded on days 1 to 5, 7, 8, 11 and 15. liver changes associated with the test substance were observed at 4149 mg/kg bw in mice and at 9641 mg/kg bw in rats, though not at lower dosage levels. few toxic signs were observed in either species at dosage levels up to 3513 mg/kg bw." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "liver changes associated with the test substance were observed at 4149 mg/kg bw in mice and at 9641 mg/kg bw in rats, though not at lower dosage levels. few toxic signs were observed in either species at dosage levels up to 3513 mg/kg bw." ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "http://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_169.pdf" ;
+        ont:reliabilityXglp             "no" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "1" ;
+        ont:reliabilityXyear            "1985" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/sprague dawley; mouse/icr" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "1792, 2509, 3513, 4919, 6886, 9641, 13496, 18895" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "lot A" ;
+        ont:test_methodXtest_substanceXpurity
+                "99.7" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/hydroxyethyl-p-phenylenediamine%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "hydroxyethyl-p-phenylenediamine sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_017.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/19> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/20>
+        a                               ont:Test ;
+        ont:additional_information      "it was a limit-test study." ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/1-hydroxyethyl-4%2C5-diamino%20pyrazole%20sulfate> ;
+        ont:compoundLabel               "1-hydroxyethyl-4,5-diamino pyrazole sulfate" ;
+        ont:dossier                     "1-hydroxyethyl-4,5-diamino pyrazole sulfate" ;
+        ont:endpointsXconclusion        "the acute oral LD50 in rats was greater than 2000 mg/kg bw" ;
+        ont:endpointsXld50              ">2000" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "no mortality or any clinical signs of systemic toxicity were recorded in the test animals. orange coloured urine was observed in all animals. Body weight gain was within a normal range." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "no mortality or any clinical signs of systemic toxicity were recorded in the test animals. orange coloured urine was observed in all animals. Body weight gain was within a normal range." ;
+        ont:endpointsXobservationsXgross_pathology_in_males
+                "in one male, large mesenteric lymph nodes and a grey-white covering on the spleen capsule were noted" ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_079.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "15" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/ him: ofa, sprague dawley, spf" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "2000" ;
+        ont:test_methodXtest_conditionXdose_volume
+                "10" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "intubation" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "deionized water" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: DA 010894" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "GST 4-20079" ;
+        ont:test_methodXtest_substanceXpurity
+                "99.1" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/methylimidazoliumpropyl%20p-phenylenediamine%20HCl>
+        a             ont:Report ;
+        rdfs:label    "methylimidazoliumpropyl p-phenylenediamine HCl" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/sites/health/files/scientific_committees/consumer_safety/docs/sccs_o_231.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/3> .
+
+<http://toxin.vub.be/resource/compound/basic%20yellow%2057>
+        a               ont:Compound ;
+        rdfs:label      "basic yellow 57" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20yellow%2057> .
+
+<http://toxin.vub.be/resource/compound/1-hydroxyethyl-4%2C5-diamino%20pyrazole%20sulfate>
+        a               ont:Compound ;
+        rdfs:label      "1-hydroxyethyl-4,5-diamino pyrazole sulfate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/1-hydroxyethyl-4%2C5-diamino%20pyrazole%20sulfate> .
+
+<http://toxin.vub.be/resource/dossier/HC%20Blue%20n°%2014>
+        a             ont:Report ;
+        rdfs:label    "HC Blue n° 14" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_062.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/24> .
+
+<http://toxin.vub.be/resource/compound/hc%20yellow%20n°%204>
+        a               ont:Compound ;
+        rdfs:label      "hc yellow n° 4" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%204> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/18>
+        a                               ont:Test ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/polysilicone-15> ;
+        ont:compoundLabel               "polysilicone-15" ;
+        ont:dossier                     "polysilicone-15" ;
+        ont:endpointsXld50              "> 2000" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "no clinical abnormalities were observed. weight gain of the animals was what would be expected of this strain." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "no clinical abnormalities were observed. weight gain of the animals was what would be expected of this strain." ;
+        ont:endpointsXobservationsXgross_pathology_in_females
+                "no abnormalities were found at autopsy." ;
+        ont:endpointsXobservationsXgross_pathology_in_males
+                "no abnormalities were found at autopsy." ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:own_comments                "the oecd guideline is not mentioned in the opinion. however, it's clearly stated that the study is done in accordance with oecd guidelines. considering the design of the study, it should have been done under oecd 401 " ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_024.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "1" ;
+        ont:test_methodXtest_animalsXhousing_and_feeding
+                "animals  had been fasted for 17 hours" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/wistar spf" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "2000" ;
+        ont:test_methodXtest_conditionXdose_volume
+                "5" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_conditionXvehicleXconcentration
+                "0.5" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "sodium carboxymethylcellulose" ;
+        ont:test_methodXtest_substanceXcomposition
+                "suspension of the test substance in the vehicle" ;
+        ont:test_methodXtest_substanceXphysical_form
+                "liquid" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride>
+        a             ont:Report ;
+        rdfs:label    "alkyl (c16, c18, c22) trimethylammonium chloride" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_012.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/13> , <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/12> , <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/11> .
+
+<http://toxin.vub.be/resource/dossier/1-hydroxyethyl-4%2C5-diamino%20pyrazole%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "1-hydroxyethyl-4,5-diamino pyrazole sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_079.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/20> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/7>
+        a                               ont:Test ;
+        ont:additional_information      "guideline: oecd & eec 84/449/eec part b.1" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate> ;
+        ont:compoundLabel               "2,5,6-triamino-4-pyrimidinol sulfate" ;
+        ont:dossier                     "2,5,6-triamino-4-pyrimidinol sulfate" ;
+        ont:endpointsXconclusion        "the LD50 of the test substance administered to rats by the oral route was >2000 mg/kg bw" ;
+        ont:endpointsXld50              ">2000" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "no clinical signs of toxicity were observed. the body-weight gain was not affected adversely during the study period" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "no clinical signs of toxicity were observed. the body-weight gain was not affected adversely during the study period" ;
+        ont:endpointsXobservationsXgross_pathology_in_females
+                "the macroscopic examination at terminal necropsy revealed no organ alterations" ;
+        ont:endpointsXobservationsXgross_pathology_in_males
+                "the macroscopic examination at terminal necropsy revealed no organ alterations" ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_185.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "1 (submission 1)" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/hanIbm: wist" ;
+        ont:test_methodXtest_animalsXweightXfemale_mean_weight_value
+                "171-179" ;
+        ont:test_methodXtest_animalsXweightXmale_mean_weight_value
+                "205-214" ;
+        ont:test_methodXtest_animalsXweightXmean_weight_unit
+                "g" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "2000" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "corn oil" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: 4-OH-2,5,6-triamino-pyrimidine sulphate" ;
+        ont:test_methodXtest_substanceXcomposition
+                "test substance homogenised in the vehicle" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/polysilicone-15>
+        a             ont:Report ;
+        rdfs:label    "polysilicone-15" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_024.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/18> .
+
+<http://toxin.vub.be/resource/dossier/hydroxypropyl%20bis%28n-hydroxyethyl-p-phenylenediamine%29%20HCl>
+        a             ont:Report ;
+        rdfs:label    "hydroxypropyl bis(n-hydroxyethyl-p-phenylenediamine) HCl" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_011.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/6> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/12>
+        a                               ont:Test ;
+        ont:additional_information      "regarding GLP compliance:   only report was audited, not the study itself. oecd tg 401, annex 5 to dir. 67/548/eec, method b.1: acute oral toxicity" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride> ;
+        ont:compoundLabel               "alkyl (c16, c18, c22) trimethylammonium chloride" ;
+        ont:dossier                     "alkyl (c16, c18, c22) trimethylammonium chloride" ;
+        ont:endpointsXconclusion        "the study authors conclude that since no lethality occurred at 2000 mg/kg bw and no significant clinical signs were observed at this dosage level, quartamin 86w was considered to be non-toxic. " ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "no clinical signs were observed at 2000 mg/kg neither treatment-related effects on body weight gain" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "no clinical signs were observed at 2000 mg/kg neither treatment-related effects on body weight gain," ;
+        ont:endpointsXobservationsXmicroscopic_pathology_in_females
+                "no macroscopic alterations were observed" ;
+        ont:endpointsXobservationsXmicroscopic_pathology_in_males
+                "no macroscopic alterations were observed" ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_012.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXlimit_test      "limit test" ;
+        ont:reliabilityXpreliminary_study
+                "in a preliminary study with 2000 mg/kg bw one female died after 6 days." ;
+        ont:reliabilityXref_in_dossier  "8" ;
+        ont:reliabilityXyear            "1996" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/sprague dawley" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "2000" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: quartamin 86w (unknown percentage of steartrimonium chloride)" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "1841 (batch nr. not documented)" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/Disperse%20Blue%20377>
+        a             ont:Report ;
+        rdfs:label    "Disperse Blue 377" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_088.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/23> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/1>
+        a                               ont:Test ;
+        ont:additional_information      " two other acute oral toxicity studies in rats and rabbits, which dated from 1980 and were poorly documented, resulted in LD-50 values of 1- 2 g/kg bw." ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/phenoxyethanol> ;
+        ont:compoundLabel               "phenoxyethanol" ;
+        ont:dossier                     "phenoxyethanol" ;
+        ont:endpointsXld50              "2740" ;
+        ont:endpointsXld50_female       "1840" ;
+        ont:endpointsXld50_male         "4070" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmortality_rate_in_females
+                "in all treatment groups, the latest time point where death occurred was observation day 1. 2 out of 5 female rats died at 1470 mg/kg bw, at a dose level of 3160 mg/kg bw, 4 females died. at the highest dose level all females died." ;
+        ont:endpointsXmortality_rate_in_males
+                " in all treatment groups, the latest time point where death occurred was observation day 1. at a dose level of 3160 mg/kg bw, 2 males died. at the highest dose level 3 males died. " ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "all female animals dosed with 681 mg/kg bw survived the 14-day observation period.  clinical signs included dyspnoea, apathy, abnormal posture, staggering, atony, deficiency in pain and cornea reflex, coma-like state, spastic gait, rough fur, exsiccosis, exophthalmoses, and general poor condition. generally females were more susceptible to 2- phenoxyethanol than males." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "all male animals dosed with 681 mg/kg bw survived the 14-day observation period. all males survived a treatment of 1470 mg/kg bw. clinical signs included dyspnoea, apathy, abnormal posture, staggering, atony, deficiency in pain and cornea reflex, coma-like state, spastic gait, rough fur, exsiccosis, exophthalmoses, and general poor condition." ;
+        ont:endpointsXobservationsXgross_pathology_in_females
+                "animals that died during the study course revealed the following signs at necropsy: hyperaemic congestion; lungs which were slightly inflated; sporadically reddened glandular stomach." ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "http://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_195.pdf" ;
+        ont:reliabilityXglp             "no" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "1" ;
+        ont:reliabilityXsccs_comment_to_test
+                "although this study was not conducted under glp and the concentration of the test substance was reported as ca. 80%, the study is considered sufficiently reliable for evaluation of the endpoint of acute oral toxicity." ;
+        ont:reliabilityXyear            "1982" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/wistar" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "681, 1470, 3160, 5000" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_conditionXvehicleXconcentration
+                "0.5" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "carboxymethylcellulose" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "82/135" ;
+        ont:test_methodXtest_substanceXpurity
+                "80" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/compound/hydroxypropyl%20bis%28n-hydroxyethyl-p-phenylenediamine%29%20HCl>
+        a               ont:Compound ;
+        rdfs:label      "hydroxypropyl bis(n-hydroxyethyl-p-phenylenediamine) HCl" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hydroxypropyl%20bis%28n-hydroxyethyl-p-phenylenediamine%29%20HCl> .
+
+<http://toxin.vub.be/resource/compound/2%2C4-diaminophenoxyethanol%20dihydrochloride%20and%20sulfate>
+        a               ont:Compound ;
+        rdfs:label      "2,4-diaminophenoxyethanol dihydrochloride and sulfate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2%2C4-diaminophenoxyethanol%20dihydrochloride%20and%20sulfate> .
+
+<http://toxin.vub.be/resource/dossier/hc%20yellow%20n°%204>
+        a             ont:Report ;
+        rdfs:label    "hc yellow n° 4" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_008.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/4> .
+
+<http://toxin.vub.be/resource/dossier/hc%20red%20n°%2016>
+        a             ont:Report ;
+        rdfs:label    "hc red n° 16" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_045.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/17> .
+
+<http://toxin.vub.be/resource/compound/Disperse%20Blue%20377>
+        a               ont:Compound ;
+        rdfs:label      "Disperse Blue 377" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/Disperse%20Blue%20377> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/17>
+        a                               ont:Test ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/hc%20red%20n°%2016> ;
+        ont:compoundLabel               "hc red n° 16" ;
+        ont:dossier                     "hc red n° 16" ;
+        ont:endpointsXconclusion        "the acute median lethal oral dose (LD50) to rats of hc red n°16 was calculated to be around 392 mg/kg. hc red n°16 should then be considered as harmful when administered by the oral route." ;
+        ont:endpointsXld50              "≈ 392" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmortality_rate_in_females
+                "one female was found dead 15 minutes after treatment at the dose of 316 mg/kg bw. at the dose level of 501 mg/kg bw,one female was found dead on day 2. four additional females were found dead on day 3." ;
+        ont:endpointsXmortality_rate_in_males
+                "at the dose level of 501 mg/kg bw, 3 males  were found dead on day 2, one additional male was found dead on day 3." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "signs of reactions to treatment were observed shortly after dosing in all surviving animals, including lethargy, red discolorations of urine and red teguments. no body weight changes comparing to control rats were noted in the low dose group and in the females from the medium dose group. recovery of survivors, as judged by external appearance and behaviour, was apparently complete within 4 days of treatment. no macroscopic findings that could be associated with treatment were observed on rats sacrificed on study termination." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "signs of reactions to treatment were observed shortly after dosing in all surviving animals, including lethargy, red discolorations of urine and red teguments. males treated at 316 mg/kg bw showed a statistically significant delay of body weight gain from day 8 onwards. recovery of survivors, as judged by external appearance and behaviour, was apparently complete within 4 days of treatment. no macroscopic findings that could be associated with treatment were observed on rats sacrificed on study termination." ;
+        ont:endpointsXobservationsXgross_pathology_in_females
+                "autopsy of the rats found dead during the study revealed discoloration of the stomach with black areas, marked dilatation of the bladder by a black liquid, pale white to dark red areas in the liver." ;
+        ont:endpointsXobservationsXgross_pathology_in_males
+                "autopsy of the rats found dead during the study revealed discoloration of the stomach with black areas, marked dilatation of the bladder by a black liquid, pale white to dark red areas in the liver." ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_045.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "5" ;
+        ont:reliabilityXyear            "1995" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat /sprague dawley" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "0, 200, 316, 501" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_conditionXrecovery_period
+                "4" ;
+        ont:test_methodXtest_conditionXvehicleXconcentration
+                "1" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "aqueous dispersion of carboxymethylcellulose in deionised water" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: hc red n°16 (sat 950726)" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "ro-el 5622/134" ;
+        ont:test_methodXtest_substanceXcomposition
+                "test substance in 1% aqueous dispersion of cacmc in deionised water" ;
+        ont:test_methodXtest_substanceXphysical_form
+                "liquid" ;
+        ont:test_methodXtest_substanceXpurity
+                "99.2" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/basic%20violet%202>
+        a             ont:Report ;
+        rdfs:label    "basic violet 2" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_066.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/15> , <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/14> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/6>
+        a                               ont:Test ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/hydroxypropyl%20bis%28n-hydroxyethyl-p-phenylenediamine%29%20HCl> ;
+        ont:compoundLabel               "hydroxypropyl bis(n-hydroxyethyl-p-phenylenediamine) HCl" ;
+        ont:dossier                     "hydroxypropyl bis(n-hydroxyethyl-p-phenylenediamine) HCl" ;
+        ont:endpointsX95_confidence_interval
+                "1797 – 2965" ;
+        ont:endpointsXconclusion        "a121 was found to be moderately toxic to non-toxic via the oral route." ;
+        ont:endpointsXld50              "2186" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmortality_rate_in_females
+                "no mortalities were reported in the 1100 and 1600 mg/kg dose groups. at 2000 mg/kg bw, the mortality was 40% (2/5). four of the five females died after the dose of 2600 mg/kg bw.  all deaths occurred within 30 minutes of dosing, except for one female dosed at 2000 mg/kg bw (day 3). " ;
+        ont:endpointsXmortality_rate_in_males
+                "at 2000 mg/kg bw, the mortality was 60% (3/5).  all deaths occurred within 30 minutes of dosing, except for one male (day 3). " ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "the animals were observed daily for 14 days. bodyweights were recorded weekly and macroscopic abnormalities were recorded at autopsy. no histological examinations were performed.body weight gain of surviving animals was comparable to historical control data. the study authors concluded a LD50 of 2186 (1797 – 2965) mg/kg bw, with comparable toxicity in the males. clinical signs were reported in some animals of all dose groups from 30 minutes after dosing, and included: hypoactivity, sedation, piloerection and dyspnoea. recovery was complete by day 7 for the females. " ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "the animals were observed daily for 14 days. bodyweights were recorded weekly and macroscopic abnormalities were recorded at autopsy. body weight gain of surviving animals was comparable to historical control data. the study authors concluded a LD50 of 2186 (1797 – 2965) mg/kg bw, with comparable toxicity in the males. clinical signs were reported in some animals of all dose groups from 30 minutes after dosing, and included: hypoactivity, sedation, piloerection and dyspnoea.  lateral decubitis was observed in one male animal. recovery was complete by day 5 for the males." ;
+        ont:endpointsXobservationsXgross_pathology_in_females
+                "there were no macroscopic abnormalities at autopsy or in the animals found dead during the study." ;
+        ont:endpointsXobservationsXgross_pathology_in_males
+                "there were no macroscopic abnormalities at autopsy or in the animals found dead during the study." ;
+        ont:endpointsXobservationsXmicroscopic_pathology_in_females
+                "no histological examinations were performed" ;
+        ont:endpointsXobservationsXmicroscopic_pathology_in_males
+                "no histological examinations were performed" ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_011.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXlimit_test      "groups of 5 male and 5 female rats received a single dose of test substance by gastric gavage at 2000 mg/kg bw in a limit test" ;
+        ont:reliabilityXref_in_dossier  "1" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/sprague-dawley" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw in females; in males" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "1100, 1600, 2000, 2600;  2000 " ;
+        ont:test_methodXtest_conditionXdose_volume
+                "10" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: imexine oax in aqueous solution" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "Pil.4X" ;
+        ont:test_methodXtest_substanceXpurity
+                "99.8" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/compound/phenoxyethanol>
+        a               ont:Compound ;
+        rdfs:label      "phenoxyethanol" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/phenoxyethanol> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/11>
+        a                               ont:Test ;
+        ont:additional_information      "oecd tg 401 (1981), annex 5 to dir. 67/548/eec, method b.1: acute oral toxicity. the lowest dose only tested in females. the two highest dose only tested in males. " ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride> ;
+        ont:compoundLabel               "alkyl (c16, c18, c22) trimethylammonium chloride" ;
+        ont:dossier                     "alkyl (c16, c18, c22) trimethylammonium chloride" ;
+        ont:endpointsXconclusion        "the study authors conclude that the LD50-value for Cetrimonium chloride is 2410 mg/kg day for male and female rats combined." ;
+        ont:endpointsXld50              "2410" ;
+        ont:endpointsXld50_female       "1550" ;
+        ont:endpointsXld50_male         "2970" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmortality_rate_in_females
+                "except for one male of the 1000-mg/kg bw group that was found dead on day 13, all deaths occurred within the first 5 days. at 630 mg/kg bw: 1/5 ; 1000 mg/kg bw: 1/5; 1600 mg/kg bw: 2/5; 2500mg/kg bw: 4/5; 3150 mg/kg bw: not tested; 4000 mg/kg bw: not tested" ;
+        ont:endpointsXmortality_rate_in_males
+                "except for one male of the 1000-mg/kg bw group that was found dead on day 13, all deaths occurred within the first 5 days. at 630 mg/kg bw: not tested; 1000 mg/kg bw: 1/5; 1600 mg/kg bw: 0/5; 2500mg/kg bw: 0/5; 3150 mg/kg bw: 3/5; 4000 mg/kg bw: 5/5" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "during the first days after administration, animals of all treated groups showed decreased motor activity, squatting posture, sunken flanks, half-closed eyes, piloerection, pale skin, laboured irregular respiration, miosis and diarrhoea. all clinical signs had completely ceased by day 10. " ;
+        ont:endpointsXobservationsXgross_pathology_in_males
+                "no macroscopic alterations were observed in rats that had survived until the end of the observation period." ;
+        ont:endpointsXobservationsXmicroscopic_pathology_in_males
+                "animals that had died during the study showed bleeding of the stomach mucosa, inflated stomach, white and/or partially detached stomach mucosa, hyaline aspect of the small intestine, reddened small intestinal mucosa, dark stained adrenals and lung haemorrhage" ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_012.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "6" ;
+        ont:reliabilityXyear            "1984" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/Wistar" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "630, 1000, 1600, 2500, 3150, 4000" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: genamin ctac (28-30% cetrimonium chloride in water)" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "e06112547 (04.10.1983)" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/24>
+        a                               ont:Test ;
+        ont:additional_information      "Taken from SCCNFP/0734/03" ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/HC%20Blue%20n°%2014> ;
+        ont:compoundLabel               "HC Blue n° 14" ;
+        ont:dossier                     "HC Blue n° 14" ;
+        ont:endpointsXconclusion        "the LD50 of the test substance was higher than 2000 mg/kg bw in rats. no signs of toxicity were observed at this dose." ;
+        ont:endpointsXld50              ">2000" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXobservationsXgross_pathology_in_females
+                "The general behaviour and body weight gain of the animals were not affected by the treatment with the test substance." ;
+        ont:endpointsXobservationsXgross_pathology_in_males
+                "the general behaviour and body weight gain of the animals were not affected by the treatment with the test substance. from day 8 onwards, spots of blue coloration were observed on the tail of the males. this was attributed to faecal elimination of the test substance, which is a dark blue dye. no abnormalities were observed at necropsy." ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_062.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "1" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "Rat/Sprague-Dawley ICO/OFA-SD (IOPS Caw)" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "2000" ;
+        ont:test_methodXtest_conditionXdose_volume
+                "10" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXvehicleXconcentration
+                "0.5%" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "aqueous methylcellulose" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: Imexine BJ" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "Pil 1" ;
+        ont:test_methodXtest_substanceXsolubility_in_vehicle
+                "94.6 (hplc)" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/compound/hydroxyethyl-p-phenylenediamine%20sulfate>
+        a               ont:Compound ;
+        rdfs:label      "hydroxyethyl-p-phenylenediamine sulfate" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hydroxyethyl-p-phenylenediamine%20sulfate> .
+
+<http://toxin.vub.be/resource/dossier/2%2C4-diaminophenoxyethanol%20dihydrochloride%20and%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "2,4-diaminophenoxyethanol dihydrochloride and sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_035.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/21> .
+
+<http://toxin.vub.be/resource/dossier/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "2,5,6-triamino-4-pyrimidinol sulfate" ;
+        rdfs:seeAlso  <https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_185.pdf> ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/7> .
+
+<http://toxin.vub.be/resource/compound/polysilicone-15>
+        a               ont:Compound ;
+        rdfs:label      "polysilicone-15" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/polysilicone-15> .
+
+<http://toxin.vub.be/resource/compound/hc%20red%20n°%2016>
+        a               ont:Compound ;
+        rdfs:label      "hc red n° 16" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20red%20n°%2016> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/16>
+        a                               ont:Test ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/basic%20yellow%2057> ;
+        ont:compoundLabel               "basic yellow 57" ;
+        ont:dossier                     "basic yellow 57" ;
+        ont:endpointsXconclusion        "the acute lethal oral dose to rats of arianor straw yellow was greater than 2.0 g/kg bw." ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "signs of reaction to treatment observed shortly after dosing in all rats were increased salivation, pilo-erection, hunched posture and abnormal gait (waddling). recovery was complete by day 3." ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "signs of reaction to treatment observed shortly after dosing in all rats were increased salivation, pilo-erection, hunched posture and abnormal gait (waddling). recovery was complete by day 3." ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_020.pdf" ;
+        ont:reliabilityXglp             "no" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "5" ;
+        ont:reliabilityXyear            "1986" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat / sprague-dawley cd" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "g/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "2.0" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "15" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_conditionXrecovery_period
+                "3" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "distilled water" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: arianor straw yellow" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "ks 3131" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/5>
+        a                               ont:Test ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/hc%20yellow%20n°%2013> ;
+        ont:compoundLabel               "hc yellow n° 13" ;
+        ont:dossier                     "hc yellow n° 13" ;
+        ont:endpointsXconclusion        "LD50 was greater than 2000 mg/kg bw" ;
+        ont:endpointsXld50              "> 2000" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "the animals were observed daily for 14 days for clinical abnormalities and mortality. body weights and macroscopic observations were recorded. treatment caused lethargy, piloerection, abnormal posture and reduced righting reflex for up to 6 hours after dosing. " ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "the animals were observed daily for 14 days for clinical abnormalities and mortality. body weights and macroscopic observations were recorded. treatment caused lethargy, piloerection, abnormal posture and reduced righting reflex for up to 6 hours after dosing. " ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_044.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "16" ;
+        ont:reliabilityXyear            "1990" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "rat/wistar crl: (wi)br" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single dose" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "2000" ;
+        ont:test_methodXtest_conditionXdose_volume
+                "10" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXvehicleXconcentration
+                "2" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "gum Arabic" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "AR 902" ;
+        ont:test_methodXtest_substanceXcomposition
+                "fluorgelb 2 in 2% gum grabic" ;
+        ont:test_methodXtest_substanceXpurity
+                "99.7" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/10>
+        a                               ont:Test ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/2-amino-4-hydroxyethylaminoanisole%20sulfate> ;
+        ont:compoundLabel               "2-amino-4-hydroxyethylaminoanisole sulfate" ;
+        ont:dossier                     "2-amino-4-hydroxyethylaminoanisole sulfate" ;
+        ont:endpointsXconclusion        "lehmannblausulphat under the conditions of this study showed an LD50 of 327 mg/kg bw." ;
+        ont:endpointsXld50              "327" ;
+        ont:endpointsXld50_female       "351" ;
+        ont:endpointsXld50_male         "333" ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "yes" ;
+        ont:endpointsXmortality_rate_in_females
+                "animals died within 24-72 hours after dosing. mortality in mice after a single oral application; dose mg/kg bx): number of dead animals, 125: 1/5, 250: 1/5, 500: 3/5, 750: 5/5, 1000: 4/5." ;
+        ont:endpointsXmortality_rate_in_males
+                "animals died within 24-72 hours after dosing. Dose (mg/kg bw): number of dead animals, 125: 1/5, 250: 2/5, 500: 4/5, 750: 3/5, 1000: 5/5. " ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "mortality and clinical signs were checked daily for the 14-day observation period. the test substance caused dose related clinical signs to CNS, coordination, reflexes and autonomic functions increasing in severity up to 72 hours after dosing. weight gains were reduced in all surviving animals. " ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "mortality and clinical signs were checked daily for the 14-day observation period. the test substance caused dose related clinical signs to CNS, coordination, reflexes and autonomic functions increasing in severity up to 72 hours after dosing. weight gains were reduced in all surviving animals. " ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health//sites/health/files/scientific_committees/consumer_safety/opinions/sccs_o_003.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "2" ;
+        ont:reliabilityXpreliminary_study
+                "a preliminary range finding test with 2 female mice of 2000 mg/kg bw indicated that the median lethal dose was less than 2000 mg/kg bw as both died within 24 hours." ;
+        ont:reliabilityXref_in_dossier  "16" ;
+        ont:reliabilityXsccs_comment_to_test
+                "the studies are not up to modern standards but the results give an indication of the LD50 in mice." ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "10" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "mouse/ bor: nmri white" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "125, 250, 500, 750,1000 " ;
+        ont:test_methodXtest_conditionXobservation_period
+                "14" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "deionised water" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: lehmannblausulphat" ;
+        ont:test_methodXtest_substanceXcomposition
+                "test substance diluted in deionized water" ;
+        ont:test_methodXtest_substanceXconcentration
+                "1.25 – 10" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-401/23>
+        a                               ont:Test ;
+        ont:additional_information      "Clinical signs were recorded at 1 h and 4 h post-dose and daily thereafter through day 15. Body weights were recorded on days 1, 8 and 15. Gross necropsy was performed on day 15 " ;
+        ont:compound                    <http://toxin.vub.be/resource/compound/Disperse%20Blue%20377> ;
+        ont:compoundLabel               "Disperse Blue 377" ;
+        ont:dossier                     "Disperse Blue 377" ;
+        ont:endpointsXconclusion        "In this study the test substance Disperse Blue 377 was non-toxic at 2000 mg/kg bw after oral administration to rats." ;
+        ont:endpointsXmoribund_or_dead_female_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXmoribund_or_dead_male_animals_prior_to_study_termination
+                "no" ;
+        ont:endpointsXobservationsXclinical_examiniation_in_females
+                "Clinical signs at both dosages included blue cage paper and urine, blue tint to eyes, blue ears, paws and tails. No visible lesions were observed at necropsy. " ;
+        ont:endpointsXobservationsXclinical_examiniation_in_males
+                "Clinical signs at both dosages included blue cage paper and urine, blue tint to eyes, blue ears, paws and tails. No visible lesions were observed at necropsy. " ;
+        ont:guideline                   "OECD 401" ;
+        ont:guidelineLabel              "OECD 401" ;
+        ont:pdf_link                    "https://ec.europa.eu/health/scientific_committees/consumer_safety/docs/sccs_o_088.pdf" ;
+        ont:reliabilityXglp             "yes" ;
+        ont:reliabilityXklimisch_score  "1" ;
+        ont:reliabilityXref_in_dossier  "1 (subm. I), 2 (subm. II)" ;
+        ont:reliabilityXyear            "2000" ;
+        ont:test_methodXtest_animalsXn_animals__group
+                "6" ;
+        ont:test_methodXtest_animalsXsex
+                "f & m" ;
+        ont:test_methodXtest_animalsXspeciesXrodent_strain
+                "Rat / Sprague-Dawley  – Hsd:SD" ;
+        ont:test_methodXtest_conditionXadministration_scheme
+                "single once daily" ;
+        ont:test_methodXtest_conditionXdose_levels_unity
+                "mg/kg bw" ;
+        ont:test_methodXtest_conditionXdose_levels_value
+                "500, 2000" ;
+        ont:test_methodXtest_conditionXobservation_period
+                "15" ;
+        ont:test_methodXtest_conditionXoral_administrationXgavage
+                "gavage" ;
+        ont:test_methodXtest_conditionXvehicleXconcentration
+                "0.5 %" ;
+        ont:test_methodXtest_conditionXvehicleXname
+                "Hydroxypropylcellulose (HPC) in distilled water" ;
+        ont:test_methodXtest_substanceXadditional_info
+                "test substance: TM#1498 (Disperse Blue 377)" ;
+        ont:test_methodXtest_substanceXchemical_batch_nr
+                "A-16798" ;
+        ont:test_methodXtest_substanceXsolubility_in_vehicle
+                "99.6 (49.8% active dye in lignosulphate dispersant)" ;
+        ont:type                        "in vivo" ;
+        ont:type_of_study               "in vivo" .
+
+<http://toxin.vub.be/resource/compound/basic%20violet%202>
+        a               ont:Compound ;
+        rdfs:label      "basic violet 2" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/basic%20violet%202> .

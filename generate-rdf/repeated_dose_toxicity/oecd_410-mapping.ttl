@@ -1,0 +1,237 @@
+#TODO: not complete
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ont: <http://ontologies.vub.be/oecd#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+<#DossierTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM oecd_410" ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/dossier/{DOSSIER}" ;
+        rr:class ont:Report ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:contains ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#TestTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+     rr:predicateObjectMap [
+        rr:predicate ont:guideline ;
+        rr:objectMap [ rr:column "GUIDELINE" ; ] ;
+    ] ; 
+
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:seeAlso ;
+        rr:objectMap [ rr:column "\"pdf link\"" ; rr:termType rr:IRI ; ] ;
+    ] ;
+.
+
+<#CompoundTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM oecd_410" ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/compound/{DOSSIER}" ;
+        rr:class ont:Compound ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:compoundOf ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#DossierTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+.
+
+
+<#TestTriplesMap>
+
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM oecd_410" ] ;
+  
+     rr:predicateObjectMap [
+        rr:predicate ont:guidelineLabel ;
+        rr:objectMap [ rr:column "\"GUIDELINE\"" ; ] ;
+    ] ; 
+
+    rr:predicateObjectMap [
+        rr:predicate ont:guideline ;
+
+        rr:objectMap [ 
+            # rr:column "GUIDELINE" ; 
+            #TODO: everywhere
+            rr:template "http://toxin.vub.be/resource/guideline/{GUIDELINE}" ; 
+            # rr:column "\"GUIDELINE\"" ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:compoundLabel ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/test/repeated-dose-toxicity/oecd_410/{ID}" ;
+        rr:class ont:Test ;
+    ] ;
+
+     rr:predicateObjectMap [
+        rr:predicate ont:type ;
+        rr:objectMap [ rr:column "\"type of study\"" ; ] ;
+    ] ; 
+
+    ### BEGIN LINK WITH COMPOUND
+    rr:predicateObjectMap [
+        rr:predicate ont:compound ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#CompoundTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+    ### END LINK WITH COMPOUND
+rr:predicateObjectMap [ rr:predicate ont:dossier ; rr:objectMap [ rr:column "DOSSIER" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:guideline ; rr:objectMap [ rr:column "GUIDELINE" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:type_of_study ; rr:objectMap [ rr:column "type of study" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:pdf_link ; rr:objectMap [ rr:column "pdf link" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_observationXchanges_in_skin_fur_eyes_mucous_membranes ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical observation: changes in skin, fur, eyes, mucous membranes" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_observationXrespiratory ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical observation: respiratory" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_observationXcirculatory ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical observation: circulatory" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_observationXautonomic_and_central_nervous_system ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical observation: autonomic and central nervous system" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_observationXsomatomotor_activity ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical observation: somatomotor activity" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_observationXbehaviour_pattern ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical observation: behaviour pattern" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_observationXother_signs_of_toxicity ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical observation: other signs of toxicity" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_observationXfoodwater_consumption ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical observation: food/water consumption" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_observationXorgan_weight_and_organbody_weight ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical observation: organ weight and organ/body weight" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_examinationXophtalmological_examination ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical examination: ophtalmological examination" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_examinationXhaematologyXhaematocrit ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical examination: Haematology: haematocrit" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_examinationXhaematologyXhaemoglobin_concentration ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical examination: Haematology: haemoglobin concentration" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_examinationXhaematologyXerythrocyte_count ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical examination: Haematology: erythrocyte count" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_examinationXhaematologyXtotal_and_differential_leucocyte_count ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical examination: Haematology: total and differential leucocyte count" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_examinationXhaematologyXmeasure_of_clotting_potentialXclotting_time ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical examination: Haematology: Measure of clotting potential: clotting time" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_examinationXhaematologyXmeasure_of_clotting_potentialXprothrombine_time ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical examination: Haematology: Measure of clotting potential: prothrombine time" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_examinationXhaematologyXmeasure_of_clotting_potentialXthromboplastin_time ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical examination: Haematology: Measure of clotting potential: thromboplastin time" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_examinationXhaematologyXmeasure_of_clotting_potentialXplatelet_count ; rr:objectMap [ rr:column "Endpoints: Observations: Clinical examination: Haematology: Measure of clotting potential: platelet count" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXsodium ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: sodium" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXpotassium ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: potassium" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXfasting_glucose ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: fasting glucose" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXcalcium ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: calcium" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXphosphorus ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: phosphorus" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXchloride ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: chloride" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXblood_urea_nitrogen ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: blood urea nitrogen" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXcreatinine ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: creatinine" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXalbumin ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: albumin" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXtotal_protein ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: total protein" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXanalyses_of_lipids ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: analyses of lipids" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXalanine_aminotransferase ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: alanine aminotransferase" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXaspartate_aminotransferase ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: aspartate aminotransferase" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXornithin_decarboxylase ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: ornithin decarboxylase" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXgamma_glutamyl_transpeptidase ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: gamma glutamyl transpeptidase" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXother_enzymes_and_biomarker ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: other enzymes and biomarker" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXhormones ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: hormones" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXacidbase_balance ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: acid/base balance" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXtotal_bilirubin ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: total bilirubin" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXmethaemoglobin ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: methaemoglobin" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXcholinesterase ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: cholinesterase" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXother ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: other" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXclinical_biochemistryXurinalysis ; rr:objectMap [ rr:column "Endpoints: Clinical biochemistry: urinalysis" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXgross_necropsyXexternal_surface_of_body ; rr:objectMap [ rr:column "Endpoints: Pathology: Gross necropsy: external surface of body" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXgross_necropsyXorifices ; rr:objectMap [ rr:column "Endpoints: Pathology: Gross necropsy: orifices" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXgross_necropsyXcranial_cavity ; rr:objectMap [ rr:column "Endpoints: Pathology: Gross necropsy: cranial cavity" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXgross_necropsyXthoracic_cavity ; rr:objectMap [ rr:column "Endpoints: Pathology: Gross necropsy: thoracic cavity" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXgross_necropsyXabdominal_cavity ; rr:objectMap [ rr:column "Endpoints: Pathology: Gross necropsy: abdominal cavity" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXgross_necropsyXliver ; rr:objectMap [ rr:column "Endpoints: Pathology: Gross necropsy: liver" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXgross_necropsyXkidneys ; rr:objectMap [ rr:column "Endpoints: Pathology: Gross necropsy: kidneys" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXgross_necropsyXadrenals ; rr:objectMap [ rr:column "Endpoints: Pathology: Gross necropsy: adrenals" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXgross_necropsyXtestes ; rr:objectMap [ rr:column "Endpoints: Pathology: Gross necropsy: testes" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXgross_necropsyXnormal_and_treated_skin ; rr:objectMap [ rr:column "Endpoints: Pathology: Gross necropsy: normal and treated skin" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXall_gross_lesions ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: all gross lesions" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXbrain ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: brain (medulla/pons, cerebellar cortex, cerebral cortex)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXpituitary ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: pituitary" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXthyroidparathyroid ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: thyroid/parathyroid" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXthymus ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: thymus" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXlungs ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: lungs" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXsalivary_glands ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: salivary glands" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXheart ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: heart" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXaorta ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: aorta" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXliver ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: liver" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXspleen ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: spleen" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXkidneys ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: kidneys" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXadrenals ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: adrenals" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXpancreas ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: pancreas" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXgonads ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: gonads" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXaccessory_genital_organs ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: accessory genital organs" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXgallbladder ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: gallbladder" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXoesophagus ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: oesophagus" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXstomach ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: stomach" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXduodenum ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: duodenum" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXjejunum ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: jejunum" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXcaecum ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: caecum" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXcolon ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: colon" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXrectum ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: rectum" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXurinary_bladder ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: urinary bladder" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXl_ymph_nodes ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology:l ymph nodes" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXperipheral_nerve ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: peripheral nerve" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpathologyXhistopathologyXother ; rr:objectMap [ rr:column "Endpoints: Pathology: Histopathology: other" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXcritical_effect ; rr:objectMap [ rr:column "Endpoints: critical effect" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXpoint_of_departure ; rr:objectMap [ rr:column "Endpoints: point of departure (pod)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXdescription_of_pod ; rr:objectMap [ rr:column "Endpoints: description of pod (NOAEL, NOEL)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXtarget_organ ; rr:objectMap [ rr:column "Endpoints: target organ" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXmoribund_or_dead_animals_prior_to_study_termination ; rr:objectMap [ rr:column "Endpoints: moribund or dead animals prior to study termination" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXmortality_rate ; rr:objectMap [ rr:column "Endpoints: mortality rate" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXdiscussion_and_results ; rr:objectMap [ rr:column "Endpoints: discussion and results" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXconclusion ; rr:objectMap [ rr:column "Endpoints: conclusion" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXhomogeneity_and_stability ; rr:objectMap [ rr:column "Test method: Test substance: homogeneity and stability" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXtreatment_prior_to_application ; rr:objectMap [ rr:column "Test method: Test substance: treatment prior to application" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXph ; rr:objectMap [ rr:column "Test method: Test substance: pH" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXphysical_form ; rr:objectMap [ rr:column "Test method: Test substance: physical form (solid, liquid)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXachieved_concentration ; rr:objectMap [ rr:column "Test method: Test substance: achieved concentration (%)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXcomposition ; rr:objectMap [ rr:column "Test method: Test substance: composition" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXpurity ; rr:objectMap [ rr:column "Test method: Test substance: purity (%)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXvehicleXname ; rr:objectMap [ rr:column "Test method: Test substance: Vehicle: name" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXvehicleXconcentration ; rr:objectMap [ rr:column "Test method: Test substance: Vehicle: concentration (%)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXchemical_batch_nr ; rr:objectMap [ rr:column "Test method: Test substance: chemical batch nr" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXadditional_info ; rr:objectMap [ rr:column "Test method: Test substance: additional info" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXtest_animalXspeciesstrain ; rr:objectMap [ rr:column "Test method: Test condition: Test animal: species/strain" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXtest_animalXsource ; rr:objectMap [ rr:column "Test method: Test condition: Test animal: source" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXtest_animalXage_at_start_of_experiment ; rr:objectMap [ rr:column "Test method: Test condition: Test animal: age at start of experiment (days, weeks, months, years)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXtest_animalXage_unit ; rr:objectMap [ rr:column "Test method: Test condition: Test animal: age unit (day, week, month, year)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXtest_animalXsex ; rr:objectMap [ rr:column "Test method: Test condition: Test animal: sex (female, male)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXtest_animalXhousing_and_feeding ; rr:objectMap [ rr:column "Test method: Test condition: Test animal: housing and feeding" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXtest_animalXweight ; rr:objectMap [ rr:column "Test method: Test condition: Test animal: weight" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXtest_animalXweight_unit ; rr:objectMap [ rr:column "Test method: Test condition: Test animal: weight unit (gram, kilogram)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXtest_animalXn_animals_group ; rr:objectMap [ rr:column "Test method: Test condition: Test animal: n animals / group" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXtest_animalXnumber_of_satellite_group ; rr:objectMap [ rr:column "Test method: Test condition: Test animal: number of satellite group" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXdose_levels ; rr:objectMap [ rr:column "Test method: Test condition: dose levels" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXdose_level_unit ; rr:objectMap [ rr:column "Test method: Test condition: dose level unit" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXdose_volume_mlkg_bw ; rr:objectMap [ rr:column "Test method: Test condition: dose volume ml/kg bw" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXrepeated_administration_scheme ; rr:objectMap [ rr:column "Test method: Test condition: repeated administration scheme (5days/week, 7days/week)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXdermal_exposureXbody_surface ; rr:objectMap [ rr:column "Test method: Test condition: Dermal exposure: body surface (cm2 or %)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXdermal_exposureXexposure_time_of_at_least_6h ; rr:objectMap [ rr:column "Test method: Test condition: Dermal exposure: exposure time of at least 6h" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXdermal_exposureXpatching ; rr:objectMap [ rr:column "Test method: Test condition: Dermal exposure: patching (occluded)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXdermal_exposureXexposure_period ; rr:objectMap [ rr:column "Test method: Test condition: Dermal exposure: exposure period (21d, 28d)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXrecovery_period ; rr:objectMap [ rr:column "Test method: Test condition: recovery period (14 day)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXyear ; rr:objectMap [ rr:column "Reliability: year" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXglp ; rr:objectMap [ rr:column "Reliability: GLP" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXsccs_comment_to_test ; rr:objectMap [ rr:column "Reliability: SCCS comment to test" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXref_in_dossier ; rr:objectMap [ rr:column "Reliability: Ref. in dossier" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXlimit_test ; rr:objectMap [ rr:column "Reliability: limit test" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXpreliminary_study ; rr:objectMap [ rr:column "Reliability: preliminary study" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXcontrol_group_satellite_group ; rr:objectMap [ rr:column "Reliability: control group + satellite group" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXklimisch_score ; rr:objectMap [ rr:column "Reliability: klimisch score" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:additional_information ; rr:objectMap [ rr:column "additional information" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:own_comments ; rr:objectMap [ rr:column "own comments" ; ] ; ] ; 

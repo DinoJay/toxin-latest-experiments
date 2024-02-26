@@ -1,0 +1,160 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ont: <http://ontologies.vub.be/oecd#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+<#DossierTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM non_oecd" ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/dossier/{DOSSIER}" ;
+        rr:class ont:Report ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:contains ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#TestTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+    #  rr:predicateObjectMap [
+    #     rr:predicate ont:guideline ;
+    #     rr:objectMap [ rr:column "\"GUIDELINE\"" ; ] ;
+    # ] ; 
+
+    # rr:predicateObjectMap [
+    #     rr:predicate rdfs:seeAlso ;
+    #     rr:objectMap [ rr:column "\"pdf link\"" ; rr:termType rr:IRI ; ] ;
+    # ] ;
+.
+
+<#CompoundTriplesMap>
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM non_oecd" ] ;
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/compound/{DOSSIER}" ;
+        rr:class ont:Compound ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:compoundOf ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#DossierTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+.
+
+
+<#TestTriplesMap>
+
+    rr:logicalTable [ rr:sqlQuery "SELECT ROWNUM() AS ID, * FROM non_oecd" ] ;
+  
+     rr:predicateObjectMap [
+        rr:predicate ont:guideline ;
+        rr:objectMap [ rr:column "\"OECD guideline\"" ; ] ;
+    ] ; 
+
+     rr:predicateObjectMap [
+        rr:predicate ont:type ;
+        rr:objectMap [ rr:column "type of study" ; ] ;
+    ] ; 
+
+    rr:subjectMap [
+        rr:template "http://toxin.vub.be/resource/test/acute-toxicity/non-oecd/{ID}" ;
+        rr:class ont:Test ;
+    ] ;
+
+    ### BEGIN LINK WITH COMPOUND
+    rr:predicateObjectMap [
+        rr:predicate ont:compound ;
+        rr:objectMap [ 
+            rr:parentTriplesMap <#CompoundTriplesMap> ; 
+            rr:joinCondition [ rr:child "ID" ; rr:parent "ID" ; ] ;
+        ] ;
+    ] ;
+    ### END LINK WITH COMPOUND
+
+ rr:predicateObjectMap [
+        rr:predicate ont:compoundLabel ;
+        rr:objectMap [ rr:column "DOSSIER" ; ] ;
+    ] ;
+
+     rr:predicateObjectMap [
+        rr:predicate ont:guidelineLabel ;
+        rr:objectMap [ rr:column "\"OECD guideline\"" ; ] ;
+    ] ; 
+rr:predicateObjectMap [ rr:predicate ont:dossier ; rr:objectMap [ rr:column "DOSSIER" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:oecd_guideline ; rr:objectMap [ rr:column "OECD guideline" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:type_of_study ; rr:objectMap [ rr:column "type of study" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:pdf_link ; rr:objectMap [ rr:column "pdf link" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXclinical_examination ; rr:objectMap [ rr:column "Endpoints: Observations: clinical examination" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXmicroscopic_finding ; rr:objectMap [ rr:column "Endpoints: Observations: microscopic finding" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXobservationsXgross_pathology ; rr:objectMap [ rr:column "Endpoints: Observations: gross pathology" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXdose_descriptor ; rr:objectMap [ rr:column "Endpoints: dose descriptor" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXdose_descriptor_unit ; rr:objectMap [ rr:column "Endpoints: dose descriptor unit" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXmoribund_or_dead_animals_prior_to_study_termination ; rr:objectMap [ rr:column "Endpoints: moribund or dead animals prior to study termination" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXmortality_rate ; rr:objectMap [ rr:column "Endpoints: mortality rate" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:endpointsXconclusion ; rr:objectMap [ rr:column "Endpoints: conclusion" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXhomogeneity_and_stability ; rr:objectMap [ rr:column "Test method: Test substance: homogeneity and stability" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXtreatment_prior_to_application ; rr:objectMap [ rr:column "Test method: Test substance: treatment prior to application" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXph ; rr:objectMap [ rr:column "Test method: Test substance: pH" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXphysical_formXsolid ; rr:objectMap [ rr:column "Test method: Test substance: Physical form: solid" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXsolubility_in_vehicle ; rr:objectMap [ rr:column "Test method: Test substance: solubility in vehicle" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXphysical_formXliquid ; rr:objectMap [ rr:column "Test method: Test substance: Physical form: liquid" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXphysical_formXaerosoldustvapour ; rr:objectMap [ rr:column "Test method: Test substance: Physical form: aerosol/dust/vapour" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXparticle_size ; rr:objectMap [ rr:column "Test method: Test substance: particle size,shape and density distribution" ; ] ; ] ; 
+# rr:predicateObjectMap [ rr:predicate ont:shape_and_density_distribution ; rr:objectMap [ rr:column "shape and density distribution" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXconcentration ; rr:objectMap [ rr:column "Test method: Test substance: concentration (% nominal and actual)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXcomposition ; rr:objectMap [ rr:column "Test method: Test substance: composition" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXpurity ; rr:objectMap [ rr:column "Test method: Test substance: purity (%)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXchemical_batch_nr ; rr:objectMap [ rr:column "Test method: Test substance: chemical batch nr" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_substanceXadditional_info ; rr:objectMap [ rr:column "Test method: Test substance: additional info" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_animalXspecies_strain ; rr:objectMap [ rr:column "Test method: Test animal: species/strain" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_animalXsource ; rr:objectMap [ rr:column "Test method: Test animal: source" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_animalXage_value_at_start_of_experiment ; rr:objectMap [ rr:column "Test method: Test animal: age value at start of experiment" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_animalXage_unit ; rr:objectMap [ rr:column "Test method: Test animal: age unit (day, week, month, year)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_animalXsex ; rr:objectMap [ rr:column "Test method: Test animal: sex (female, male)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_animalXweight ; rr:objectMap [ rr:column "Test method: Test animal: weight" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_animalXweight_measuring_unit ; rr:objectMap [ rr:column "Test method: Test animal: weight measuring unit (gram, kilogram)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_animalXfeed ; rr:objectMap [ rr:column "Test method: Test animal: feed" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_animalXn_animals__dose ; rr:objectMap [ rr:column "Test method: Test animal: n animals / dose" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXdose_levels ; rr:objectMap [ rr:column "Test method: Test condition: dose levels" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXdose_level_unit ; rr:objectMap [ rr:column "Test method: Test condition: dose level unit ( or extra info)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXadministration_scheme ; rr:objectMap [ rr:column "Test method: Test condition: administration scheme" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXroute_of_exposureXoral ; rr:objectMap [ rr:column "Test method: Test condition: Route of exposure: oral (gavage, drink water, feed)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXroute_of_exposureXdermal ; rr:objectMap [ rr:column "Test method: Test condition: Route of exposure: dermal" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXroute_of_exposureXdermalXbody_surface_area ; rr:objectMap [ rr:column "Test method: Test condition: Route of exposure: Dermal: body surface area" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXroute_of_exposureXdermalXpatching_technique ; rr:objectMap [ rr:column "Test method: Test condition: Route of exposure: Dermal: patching technique ( open, semi-occluded, occluded)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXroute_of_exposureXdermalXskin_condition_and_region ; rr:objectMap [ rr:column "Test method: Test condition: Route of exposure: Dermal: skin condition and region" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXroute_of_exposureXinhalation_only ; rr:objectMap [ rr:column "Test method: Test condition: Route of exposure: inhalation (nose (head) -only, whole body)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXroute_of_exposureXoccular ; rr:objectMap [ rr:column "Test method: Test condition: Route of exposure: occular" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXroute_of_exposureXother ; rr:objectMap [ rr:column "Test method: Test condition: Route of exposure: other" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXdose_volume_mlkg_bw ; rr:objectMap [ rr:column "Test method: Test condition: dose volume ml/kg bw" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXrinsing_procedure ; rr:objectMap [ rr:column "Test method: Test condition: rinsing procedure" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXuse_of_anaesthetics_and_analgesics ; rr:objectMap [ rr:column "Test method: Test condition: use of anaesthetics and analgesics" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXvehicle_name ; rr:objectMap [ rr:column "Test method: Test condition: vehicle name" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXvehicle_concentration ; rr:objectMap [ rr:column "Test method: Test condition: vehicle concentration %" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXexposure_time ; rr:objectMap [ rr:column "Test method: Test condition: exposure time (hour)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:test_methodXtest_conditionXobservation_period ; rr:objectMap [ rr:column "Test method: Test condition: observation period (day)" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXsccs_comment_to_test ; rr:objectMap [ rr:column "Reliability: SCCS comment to test" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXyear ; rr:objectMap [ rr:column "Reliability: year" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXcontrol_groups ; rr:objectMap [ rr:column "Reliability: control groups" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXglp ; rr:objectMap [ rr:column "Reliability: GLP" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXpreliminary_test ; rr:objectMap [ rr:column "Reliability: preliminary test" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXklimisch_score ; rr:objectMap [ rr:column "Reliability: Klimisch score" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:reliabilityXref_in_dossier ; rr:objectMap [ rr:column "Reliability: Ref. in dossier" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:additional_information ; rr:objectMap [ rr:column "additional information" ; ] ; ] ; 
+rr:predicateObjectMap [ rr:predicate ont:own_comments ; rr:objectMap [ rr:column "own comments" ; ] ; ] ; 

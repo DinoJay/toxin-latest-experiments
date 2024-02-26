@@ -1,0 +1,119 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix ont:   <http://ontologies.vub.be/oecd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-420/3>
+        a                   ont:Test ;
+        ont:compound        <http://toxin.vub.be/resource/compound/hc%20yellow%20n°9> ;
+        ont:compoundLabel   "hc yellow n°9" ;
+        ont:guideline       "OECD 420" ;
+        ont:guidelineLabel  "OECD 420" ;
+        ont:type            "in vivo" .
+
+<http://toxin.vub.be/resource/compound/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride>
+        a               ont:Compound ;
+        rdfs:label      "alkyl (c16, c18, c22) trimethylammonium chloride" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride> .
+
+<http://toxin.vub.be/resource/dossier/resorcinol>
+        a             ont:Report ;
+        rdfs:label    "resorcinol" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-420/2> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_015.pdf> .
+
+<http://toxin.vub.be/resource/dossier/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane>
+        a             ont:Report ;
+        rdfs:label    "bis(butylbenzoate) diaminotriazine aminopropyltrisiloxane" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-420/6> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_055.pdf> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-420/2>
+        a                   ont:Test ;
+        ont:compound        <http://toxin.vub.be/resource/compound/resorcinol> ;
+        ont:compoundLabel   "resorcinol" ;
+        ont:guideline       "OECD 420" ;
+        ont:guidelineLabel  "OECD 420" ;
+        ont:type            "in vivo" .
+
+<http://toxin.vub.be/resource/compound/hc%20yellow%20n°9>
+        a               ont:Compound ;
+        rdfs:label      "hc yellow n°9" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20yellow%20n°9> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-420/1>
+        a                   ont:Test ;
+        ont:compound        <http://toxin.vub.be/resource/compound/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride> ;
+        ont:compoundLabel   "alkyl (c16, c18, c22) trimethylammonium chloride" ;
+        ont:guideline       "OECD 420" ;
+        ont:guidelineLabel  "OECD 420" ;
+        ont:type            "in vivo" .
+
+<http://toxin.vub.be/resource/compound/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane>
+        a               ont:Compound ;
+        rdfs:label      "bis(butylbenzoate) diaminotriazine aminopropyltrisiloxane" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-420/6>
+        a                   ont:Test ;
+        ont:compound        <http://toxin.vub.be/resource/compound/bis%28butylbenzoate%29%20diaminotriazine%20aminopropyltrisiloxane> ;
+        ont:compoundLabel   "bis(butylbenzoate) diaminotriazine aminopropyltrisiloxane" ;
+        ont:guideline       "OECD 420" ;
+        ont:guidelineLabel  "OECD 420" ;
+        ont:type            "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/2-hydroxyethylamino-5-nitroanisole>
+        a             ont:Report ;
+        rdfs:label    "2-hydroxyethylamino-5-nitroanisole" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-420/5> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fph_risk%2Fcommittees%2F04_sccs%2Fdocs%2Fsccs_o_001.pdf> .
+
+<http://toxin.vub.be/resource/compound/resorcinol>
+        a               ont:Compound ;
+        rdfs:label      "resorcinol" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/resorcinol> .
+
+<http://toxin.vub.be/resource/compound/2-hydroxyethylamino-5-nitroanisole>
+        a               ont:Compound ;
+        rdfs:label      "2-hydroxyethylamino-5-nitroanisole" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/2-hydroxyethylamino-5-nitroanisole> .
+
+<http://toxin.vub.be/resource/dossier/hc%20yellow%20n°9>
+        a             ont:Report ;
+        rdfs:label    "hc yellow n°9" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-420/3> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_026.pdf> .
+
+<http://toxin.vub.be/resource/dossier/alkyl%20%28c16%2C%20c18%2C%20c22%29%20trimethylammonium%20chloride>
+        a             ont:Report ;
+        rdfs:label    "alkyl (c16, c18, c22) trimethylammonium chloride" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-420/1> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_012.pdf> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-420/5>
+        a                   ont:Test ;
+        ont:compound        <http://toxin.vub.be/resource/compound/2-hydroxyethylamino-5-nitroanisole> ;
+        ont:compoundLabel   "2-hydroxyethylamino-5-nitroanisole" ;
+        ont:guideline       "OECD 420" ;
+        ont:guidelineLabel  "OECD 420" ;
+        ont:type            "in vivo" .
+
+<http://toxin.vub.be/resource/compound/hc%20red%20n°%207>
+        a               ont:Compound ;
+        rdfs:label      "hc red n° 7" ;
+        ont:compoundOf  <http://toxin.vub.be/resource/dossier/hc%20red%20n°%207> .
+
+<http://toxin.vub.be/resource/test/acute-toxicity/oecd-420/4>
+        a                   ont:Test ;
+        ont:compound        <http://toxin.vub.be/resource/compound/hc%20red%20n°%207> ;
+        ont:compoundLabel   "hc red n° 7" ;
+        ont:guideline       "OECD 420" ;
+        ont:guidelineLabel  "OECD 420" ;
+        ont:type            "in vivo" .
+
+<http://toxin.vub.be/resource/dossier/hc%20red%20n°%207>
+        a             ont:Report ;
+        rdfs:label    "hc red n° 7" ;
+        ont:contains  <http://toxin.vub.be/resource/test/acute-toxicity/oecd-420/4> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_007.pdf> .
