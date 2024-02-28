@@ -9,6 +9,21 @@ import set from "lodash.set";
 import klimischScore from "./klimischScore";
 
 
+
+const previewChemicalIdentityQuery =
+	` 
+			PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+			PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+			PREFIX ont: <http://ontologies.vub.be/oecd#>
+
+			SELECT DISTINCT *
+			{
+				?compound rdfs:label ?label .
+			}
+	`
+
+
+
 const chemicalIdentityQuery = ({ smiles, cas, inci, label }) => {
 	const smilesStr = smiles !== null
 		? `?compound ont:SMILES "${smiles}" .`
@@ -20,7 +35,7 @@ const chemicalIdentityQuery = ({ smiles, cas, inci, label }) => {
 
 	// console.log('smilesStr', smilesStr);
 
-	const inciStr = inci ? `?compound rdfs:label "${inci}" .` : 'OPTIONAL { ?compound ont:INCI ?inci . }';
+	const inciStr = inci ? `filter contains(?label,"${inci}") .` : 'OPTIONAL { ?compound ont:INCI ?inci . }';
 
 	const ret = ` 
 			PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -73,13 +88,13 @@ const chemicalIdentityQuery = ({ smiles, cas, inci, label }) => {
 // ont:vehicle                 "dmso" ;
 // ont:year                    "2005" .
 
-const sparqlGetSynonyms = (label) => `
-		PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-		SELECT DISTINCT * WHERE {
-			?filterURI skos:prefLabel ${label} .
-			GRAPH ?guidelineURI  { ?filterURI skos:altLabel ?variable }
-		}
-`
+// const sparqlGetSynonyms = (label) => `
+// 		PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+// 		SELECT DISTINCT * WHERE {
+// 			?filterURI skos:prefLabel ${label} .
+// 			GRAPH ?guidelineURI  { ?filterURI skos:altLabel ?variable }
+// 		}
+// `
 
 const sparqlQuery = () => ` 
 	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
@@ -122,6 +137,12 @@ export const constructQuery = ({ endpoint, cas = null, inci = null, smiles = nul
 		.then((res) => res.json())
 }
 
+
+export const constructChemicalIdentitPreviewyQuery = () => {
+
+	return fetch(`${endpointMaker(CHEMICAL_IDENTITY)}?query=${encodeURIComponent((previewChemicalIdentityQuery))}&format=json`)
+		.then((res) => res.json())
+}
 
 
 

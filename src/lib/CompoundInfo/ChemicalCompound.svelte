@@ -2,19 +2,42 @@
 	export let chemicalIdentity;
 	export let openId;
 	export let onClick;
-	import { constructQuery, getSparqlQueryString } from '$lib/sparql';
+	import {
+		constructChemicalIdentitPreviewyQuery,
+		constructQuery,
+		getSparqlQueryString
+	} from '$lib/sparql';
 	import Expandable from '$lib/Expandable.svelte';
 	import { casRegex, smilesRegex } from '$lib/chemRegexes';
 	import { CHEMICAL_IDENTITY } from '$lib/endpoint_constants';
 	import CompoundInfoWrapper from './CompoundInfoWrapper.svelte';
+	import transformObject from '$lib/transformObject';
+	import Panel from '$lib/Panel.svelte';
+	import DropDown from '$lib/DropDown.svelte';
 
 	let promise;
 
-	let inputVal = 'C1=CC=C(C(=C1)NCCO)[N+](=O)[O-]';
+	let inputVal = '';
 	// let imgPromise = null;
 	let compound = null;
 	// const defaultComp = chemicalIdentity.find((d) => d.smiles.toLowerCase() === q.toLowerCase());
 	console.log('chemicalIdentity', chemicalIdentity);
+
+	let previewValues = null;
+
+	const previewValuePromise = constructChemicalIdentitPreviewyQuery().then((d) => {
+		// console.log('d', d);
+		const { bindings } = d?.results;
+		const data = bindings.map(transformObject).map((d) => d.label);
+		// console.log('data', data);
+		previewValues = data;
+	});
+
+	$: filteredPreviewValues =
+		inputVal !== ''
+			? previewValues?.filter((d) => d.toLowerCase().includes(inputVal.toLowerCase()))
+			: previewValues;
+	$: console.log('filteredPreviewValues', filteredPreviewValues);
 </script>
 
 <h2 class="text-xl">Chemical Compound</h2>
@@ -31,9 +54,13 @@
 		else sparqlQueryArg = { inci: trimmed };
 
 		promise = constructQuery({ endpoint: CHEMICAL_IDENTITY, ...sparqlQueryArg }).then((res) => {
-			console.log('res', res);
+			console.log('res Search', res);
+
+			const { bindings } = res?.results;
+			const data = bindings.map(transformObject);
 			return {
 				...res,
+				data,
 				...sparqlQueryArg,
 				imgSrc: e,
 				type: 'compound'
@@ -41,11 +68,33 @@
 		});
 	}}
 >
-	<div class="text-lg ">
+	<div class="text-xl flex items-center mb-1">
 		<label for="compound">‘CAS No’ or ‘INCI ’ or ‘SMILES’</label>
-		<input bind:value={inputVal} class="border m-1" type="text" id="compound" name="compound" />
+		<input
+			bind:value={inputVal}
+			placeholder="Enter or select a compound..."
+			class="border m-1 p-1 flex-grow"
+			type="text"
+			id="compound"
+			name="compound"
+			on:change={(e) => {
+				inputVal = e.target.value;
+			}}
+		/>
 	</div>
-	<button class="border p-2 w-full" type="submit">Go!</button>
+	<DropDown>
+		{#if filteredPreviewValues}
+			{#each filteredPreviewValues as d}
+				<li class="border p-2 mb-1 cursor-pointer" on:click={() => (inputVal = d)}>{d}</li>
+			{/each}
+			{#if filteredPreviewValues.length === 0}
+				<li class=" p-2 mb-1 cursor-pointer">No matches found</li>
+			{/if}
+		{:else}
+			Loading...
+		{/if}
+	</DropDown>
+	<button class="border p-2 mt-3 w-full" type="submit">Go!</button>
 </form>
 
 <div class="border mt-3 p-3 flex flex-col flex-grow">
@@ -54,9 +103,11 @@
 			<p>...waiting</p>
 		{:then res}
 			{#if res.type === 'compound'}
-				<div class="">
-					<CompoundInfoWrapper {...res} />
-				</div>
+				{#each res.data as d}
+					<Panel title={d.label} cls="mb-3">
+						<CompoundInfoWrapper {...d} />
+					</Panel>
+				{/each}
 			{/if}
 		{:catch error}
 			<p style="color: red">{error.message}</p>

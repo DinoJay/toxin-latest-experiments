@@ -1,22 +1,16 @@
 <script>
 	export let results;
 	export let imgSrc;
-	import transformObject from '$lib/transformObject';
+	export let data;
+
 	// import ArrowRightSFill from 'svelte-remixicon/lib/icons/ArrowRightSFill.svelte';
 	import CompoundInfo from './CompoundInfo.svelte';
 	import ToxicologicalData from './ToxicologicalData.svelte';
 
 	console.log('props compoundinfo WRAPPER', $$props);
-	const { bindings } = results;
-	const data = bindings.map(transformObject);
-	const d = data.length > 0 ? data[0] : null;
 
-	// console.log('compound data', d);
+	console.log('$$props', $$props);
 </script>
 
-{#if d}
-	<CompoundInfo {...d} {imgSrc} />
-	<ToxicologicalData {...d} />
-{:else}
-	<div class="text-2xl">No Results</div>
-{/if}
+<CompoundInfo {...$$props} />
+<ToxicologicalData {...$$props} />

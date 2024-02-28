@@ -508,29 +508,17 @@
         ont:contains  <http://toxin.vub.be/resource/chemicalidentity/4-amino-2-nitrodiphenylamine-2%27-carboxylic%20acid> ;
         ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_058.pdf> .
 
-<http://toxin.vub.be/resource/dossier/disperse%20violet%201>
+<http://toxin.vub.be/resource/dossier/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate>
         a             ont:Report ;
-        rdfs:label    "disperse violet 1" ;
-        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/disperse%20violet%201> ;
-        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_028.pdf> .
+        rdfs:label    "2,5,6-triamino-4-pyrimidinol sulfate" ;
+        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_185.pdf> .
 
 <http://toxin.vub.be/resource/dossier/acid%20orange%207>
         a             ont:Report ;
         rdfs:label    "acid orange 7" ;
         ont:contains  <http://toxin.vub.be/resource/chemicalidentity/acid%20orange%207> ;
         ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_158.pdf> .
-
-<http://toxin.vub.be/resource/dossier/basic%20yellow%2057>
-        a             ont:Report ;
-        rdfs:label    "basic yellow 57" ;
-        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/basic%20yellow%2057> ;
-        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_020.pdf> .
-
-<http://toxin.vub.be/resource/dossier/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate>
-        a             ont:Report ;
-        rdfs:label    "2,5,6-triamino-4-pyrimidinol sulfate" ;
-        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/2%2C5%2C6-triamino-4-pyrimidinol%20sulfate> ;
-        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_185.pdf> .
 
 <http://toxin.vub.be/resource/chemicalidentity/4-nitrophenyl%20aminoethylurea>
         a                              ont:Compound ;
@@ -557,25 +545,17 @@
         ont:purity                     "purity and impurities of various batches of 4-nitrophenyl aminoethylurea. batch ch. b1/89; identification /characterisation: nmr, hplc. nmr content (g/100 g): 99.5. hplc content* (g/100g): 97.5. batch ch. b3/89; identification /characterisation: nmr, ms, hplc, ir, uv_vis. nmr content (g/100 g): 96.5. hplc content* (g/100g): 98.1. batch ch. l4/130; identification /characterisation: nmr, hplc, elemental analysis. nmr content (g/100 g): 92.7. hplc content* (g/100g): 91.6. batch leh 5/2; identification /characterisation: nmr, ms, hplc, ir, uv_vis. nmr content (g/100 g): 96.8. hplc content* (g/100g): 95.2. batch l4/113; identification /characterisation: nmr, hplc. nmr content (g/100 g): 98.0. hplc content* (g/100g): 99.2. batch ch. 110889 (r960038 05); identification /characterisation: nmr, ms, ir, uv_vis, hplc, elemental analysis. nmr content (g/100 g): 99.5. hplc content* (g/100g): reference material.  * reference material ch. 110889 (r96003805). " ;
         ont:vapour_pressure            "17.4 hPa (20°C)" .
 
-<http://toxin.vub.be/resource/chemicalidentity/hc%20yellow%20n°%204>
-        a                              ont:Compound ;
-        rdfs:label                     "hc yellow n°4" , "hc yellow n° 4" ;
-        ont:CAS_number                 "59820-43-8" ;
-        ont:EC_number                  "258-002-4" ;
-        ont:INCI                       "hc yellow n°4" ;
-        ont:SMILES                     "C1=CC(=C(C=C1[N+](=O)[O-])OCCO)NCCO" ;
-        ont:additional_info            "characterisation of gts03976 (batch 17): batch 17 of gts03976 was selected as a typical commercial lot of hc yellow n° 4, used for toxicological experiments 2004/2005. this batch was used for stability tests of the formulations. purity: 99.2% (HPLC at 395nm) impurities: 2-(2-amino-5-nitrophenoxy)ethanol 0.312 % (HPLC area) / N-(2-hydroxyethyl)-O-2-[(2 -hydroxyethoxy)]ethyl]-2-amino-5-nitrophenol 0.100% (HPLC area) / N,N,O-tris-(2-hydroxyethyl)-2-amino-5-nitrophenol 0.194% (HPLC area) / N-2-[(2-hydroxyethoxy)ethyl]-O-(2-hydroxyethyl)-2-amino-5-nitrophenol 0.190% (HPLC area) / N-Nitroso-N-phenyl-N-hydroxyethylnitrosamine < 20 ppb / loss on drying: 0.097% / residue on Ignition: 0.26% . the mean purity of hc yellow n° 4 was determined by fourfold determination as peak area of analysed vs. total peak area after injection of sample by HPLC-UV at 395 nm. identification of the impurities was performed due to retention times and a reference chromatogram. no standards were used for identification or quantification (ref 1b). the water solubility is not determined by the EC method A6. general comments to physico-chemical characterisation: only for one batch, data on identity and purity was provided. for other batches used, the stated purity was between >93 to 99.9%. for many batches used no information on purity was available. / the impurities were not quantified by appropriate standards but relative to absolute resulting HPLC area. / only UV-active impurities were identified, because of the lack of other examinations of purity. / hc yellow n° 4 is a secondary amine, and thus is prone to nitrosation. it should not be used in combination with nitrosating substances. the nitrosamine content should be < 50 ppb. in the absence of a study report, the NDELA content could not be evaluated. / the stability in typical hair dye formulation is not reported. / the Log Pow strongly depends on the pH, especially for ionisable molecules, zwitterions etc. therefore, a single calculated value of Log Pow, usually without any reference to the respective pH, cannot be correlated to physiological conditions and to the pH conditions of the percutaneous absorption studies." ;
-        ont:empirical_formula          "C10H14N2O5" ;
-        ont:function_and_uses          "hc yellow n° 4 is used in non-oxidative hair dye formulations with a maximum on-head concentration of 1.5%." ;
-        ont:homogeneity_and_stability  "stability tests were conducted using gts03976 (batch 17). analysis was performed by HPLC-UV at 395 nm. the analytical method is described in ref 1b. the purity of the same batch (gts03976, batch 17) was analyzed in 2004 and 2005 to demonstrate the stability of the solid hc yellow n° 4. the mean purity of four replicate tests was 99.2 and 99.3 % respectively (ref 1a). the formulations used for the repeated toxicity studies had shown to be stable for at least 14 days. these formulations were used within this time. determination of hc yellow n° 4 in toxicological solutions was performed by HPLC-UV at 395 nm against a standard solution of hc yellow n° 4 (ref 1a). PEG 400 solutions were stored at room temperature. preparations of two concentrations, 1 mg/ml and 200 mg/ml were used for stability tests, four sets of duplicate samples for each dose level. three sets of samples were refrigerated and analyzed in duplicate on day 5, 8 and 16. one set was kept at room temperature and analyzed in duplicate after 24 hours. PEG 400 solutions of hc yellow n° 4 (1 mg/ml and 200 mg/ml) were shown to be stable (within ± 5% of the initial value) for 24 hours when stored at room temperature and 16 days when stored at 5 ± 3°C (ref 1b). the stability of hc yellow n° 4 in DMSO formulations was determined at two concentrations, 0.05 mg/ml and 300 mg/ml. one sample of each concentration was analyzed on the day of preparation and after storage in a freezer (-20°C) for 7 days. DMSO solutions of hc yellow n° 4 (0.05 mg/ml and 20 mg/ml) were shown to be stable (within ± 3% of the initial value) for 7 days when stored at -20 ± 10°C (ref 1b)." ;
-        ont:impurity                   "2-(2-amino-5-nitrophenoxy)ethanol < 0.7% (HPLC area) /N,N,O-tris-(2-hydroxyethyl)-2-amino-5-nitrophenol < 0.3% (HPLC area) / N-2-[(2-hydroxyethoxy)ethyl]-O-(2-hydroxyethyl)- 2-amino-5-nitrophenol < 0.5% (HPLC area)/ N-(2-hydroxyethyl)-O-2-[(2-hydroxyethoxy)]ethyl]- 2-amino-5-nitrophenol < 0.18% (HPLC area) / Nitrosodiethanolamine (NDELA) < 50 ppb / heavy metals: As, Hg, Sb < 5 ppm / Cd < 10 ppm / Pb < 20 ppm / loss on drying: < 1% / residue on ignition: < 1% " ;
-        ont:inorganic_solvents         "water: 1.39-2.09 mg/ml" ;
-        ont:melting_point              "142-147" ;
-        ont:molecularweight            "242.23" ;
-        ont:organic_solvents           "DMSO: 252-378 mg/ml; ethanol: 26.1-39.2 mg/ml" ;
-        ont:partition_coefficient      "0.81" ;
-        ont:physical_form              "yellow to yellow/green crystalline powder" ;
-        ont:purity                     "> 95%" .
+<http://toxin.vub.be/resource/dossier/disperse%20violet%201>
+        a             ont:Report ;
+        rdfs:label    "disperse violet 1" ;
+        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/disperse%20violet%201> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_028.pdf> .
+
+<http://toxin.vub.be/resource/dossier/basic%20yellow%2057>
+        a             ont:Report ;
+        rdfs:label    "basic yellow 57" ;
+        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/basic%20yellow%2057> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_020.pdf> .
 
 <http://toxin.vub.be/resource/chemicalidentity/Disperse%20Black%209>
         a                              ont:Compound ;
@@ -598,6 +578,26 @@
         ont:physical_form              "Orange brown powder" ;
         ont:primary_name               "Disperse Black 9" ;
         ont:purity                     "The analyses for purity had been made in compliance with GLP. This does not apply for the identification of impurities. Purity of the reference substance: The reference substance of 2,2'-[4-(4-aminophenylazo)phenylimino]diethanol is a commercially available product(Aldrich). The purity is 97.4%, including 1.3% water. So, about 2% of the reference substance is not identified. Purity of the substance used for toxicological testing: A typical commercial lot of Disperse Black 9, GTS 03872 lot A35996, was used for toxicological evaluation during 2004 and 2005. It is a mixture of 2,2'-[4-(4- aminophenylazo)phenylimino]diethanol and Lignosulphate. This batch has a dye content of 52.6%. HPLC had been used for analysis (Wavelength: 436 nm). The reference substance had been used as an external standard. Physical Properties: Loss on Drying: Thermogravimetic analysis showed the volatile content to be 3.85% Chemical identification: The identity of 2,2'-[4-(4-aminophenylazo)phenylimino]diethanol has been proven by 1H NMR; 13C NMR and FTIR." .
+
+<http://toxin.vub.be/resource/chemicalidentity/hc%20yellow%20n°%204>
+        a                              ont:Compound ;
+        rdfs:label                     "hc yellow n°4" , "hc yellow n° 4" ;
+        ont:CAS_number                 "59820-43-8" ;
+        ont:EC_number                  "258-002-4" ;
+        ont:INCI                       "hc yellow n°4" ;
+        ont:SMILES                     "C1=CC(=C(C=C1[N+](=O)[O-])OCCO)NCCO" ;
+        ont:additional_info            "characterisation of gts03976 (batch 17): batch 17 of gts03976 was selected as a typical commercial lot of hc yellow n° 4, used for toxicological experiments 2004/2005. this batch was used for stability tests of the formulations. purity: 99.2% (HPLC at 395nm) impurities: 2-(2-amino-5-nitrophenoxy)ethanol 0.312 % (HPLC area) / N-(2-hydroxyethyl)-O-2-[(2 -hydroxyethoxy)]ethyl]-2-amino-5-nitrophenol 0.100% (HPLC area) / N,N,O-tris-(2-hydroxyethyl)-2-amino-5-nitrophenol 0.194% (HPLC area) / N-2-[(2-hydroxyethoxy)ethyl]-O-(2-hydroxyethyl)-2-amino-5-nitrophenol 0.190% (HPLC area) / N-Nitroso-N-phenyl-N-hydroxyethylnitrosamine < 20 ppb / loss on drying: 0.097% / residue on Ignition: 0.26% . the mean purity of hc yellow n° 4 was determined by fourfold determination as peak area of analysed vs. total peak area after injection of sample by HPLC-UV at 395 nm. identification of the impurities was performed due to retention times and a reference chromatogram. no standards were used for identification or quantification (ref 1b). the water solubility is not determined by the EC method A6. general comments to physico-chemical characterisation: only for one batch, data on identity and purity was provided. for other batches used, the stated purity was between >93 to 99.9%. for many batches used no information on purity was available. / the impurities were not quantified by appropriate standards but relative to absolute resulting HPLC area. / only UV-active impurities were identified, because of the lack of other examinations of purity. / hc yellow n° 4 is a secondary amine, and thus is prone to nitrosation. it should not be used in combination with nitrosating substances. the nitrosamine content should be < 50 ppb. in the absence of a study report, the NDELA content could not be evaluated. / the stability in typical hair dye formulation is not reported. / the Log Pow strongly depends on the pH, especially for ionisable molecules, zwitterions etc. therefore, a single calculated value of Log Pow, usually without any reference to the respective pH, cannot be correlated to physiological conditions and to the pH conditions of the percutaneous absorption studies." ;
+        ont:empirical_formula          "C10H14N2O5" ;
+        ont:function_and_uses          "hc yellow n° 4 is used in non-oxidative hair dye formulations with a maximum on-head concentration of 1.5%." ;
+        ont:homogeneity_and_stability  "stability tests were conducted using gts03976 (batch 17). analysis was performed by HPLC-UV at 395 nm. the analytical method is described in ref 1b. the purity of the same batch (gts03976, batch 17) was analyzed in 2004 and 2005 to demonstrate the stability of the solid hc yellow n° 4. the mean purity of four replicate tests was 99.2 and 99.3 % respectively (ref 1a). the formulations used for the repeated toxicity studies had shown to be stable for at least 14 days. these formulations were used within this time. determination of hc yellow n° 4 in toxicological solutions was performed by HPLC-UV at 395 nm against a standard solution of hc yellow n° 4 (ref 1a). PEG 400 solutions were stored at room temperature. preparations of two concentrations, 1 mg/ml and 200 mg/ml were used for stability tests, four sets of duplicate samples for each dose level. three sets of samples were refrigerated and analyzed in duplicate on day 5, 8 and 16. one set was kept at room temperature and analyzed in duplicate after 24 hours. PEG 400 solutions of hc yellow n° 4 (1 mg/ml and 200 mg/ml) were shown to be stable (within ± 5% of the initial value) for 24 hours when stored at room temperature and 16 days when stored at 5 ± 3°C (ref 1b). the stability of hc yellow n° 4 in DMSO formulations was determined at two concentrations, 0.05 mg/ml and 300 mg/ml. one sample of each concentration was analyzed on the day of preparation and after storage in a freezer (-20°C) for 7 days. DMSO solutions of hc yellow n° 4 (0.05 mg/ml and 20 mg/ml) were shown to be stable (within ± 3% of the initial value) for 7 days when stored at -20 ± 10°C (ref 1b)." ;
+        ont:impurity                   "2-(2-amino-5-nitrophenoxy)ethanol < 0.7% (HPLC area) /N,N,O-tris-(2-hydroxyethyl)-2-amino-5-nitrophenol < 0.3% (HPLC area) / N-2-[(2-hydroxyethoxy)ethyl]-O-(2-hydroxyethyl)- 2-amino-5-nitrophenol < 0.5% (HPLC area)/ N-(2-hydroxyethyl)-O-2-[(2-hydroxyethoxy)]ethyl]- 2-amino-5-nitrophenol < 0.18% (HPLC area) / Nitrosodiethanolamine (NDELA) < 50 ppb / heavy metals: As, Hg, Sb < 5 ppm / Cd < 10 ppm / Pb < 20 ppm / loss on drying: < 1% / residue on ignition: < 1% " ;
+        ont:inorganic_solvents         "water: 1.39-2.09 mg/ml" ;
+        ont:melting_point              "142-147" ;
+        ont:molecularweight            "242.23" ;
+        ont:organic_solvents           "DMSO: 252-378 mg/ml; ethanol: 26.1-39.2 mg/ml" ;
+        ont:partition_coefficient      "0.81" ;
+        ont:physical_form              "yellow to yellow/green crystalline powder" ;
+        ont:purity                     "> 95%" .
 
 <http://toxin.vub.be/resource/chemicalidentity/2-%282-Ethoxyethoxy%29ethanol>
         a                              ont:Compound ;
@@ -808,17 +808,17 @@
         ont:contains  <http://toxin.vub.be/resource/chemicalidentity/2-%282-Ethoxyethoxy%29ethanol> ;
         ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_039.pdf> .
 
-<http://toxin.vub.be/resource/dossier/HC%20Blue%20n°%2014%20%28%20COLIPA%20n°%20C172%29>
-        a             ont:Report ;
-        rdfs:label    "HC Blue n° 14 ( COLIPA n° C172)" ;
-        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/HC%20Blue%20n°%2014%20%28%20COLIPA%20n°%20C172%29> ;
-        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_062.pdf> .
-
 <http://toxin.vub.be/resource/dossier/hydroxypropyl%20bis%28N-hydroxyethyl-p-phenylenediamine%29%20HCl>
         a             ont:Report ;
         rdfs:label    "hydroxypropyl bis(N-hydroxyethyl-p-phenylenediamine) HCl" ;
         ont:contains  <http://toxin.vub.be/resource/chemicalidentity/hydroxypropyl%20bis%28n-hydroxyethyl-p-phenylenediamine%29%20HCl> ;
         ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_011.pdf> .
+
+<http://toxin.vub.be/resource/dossier/HC%20Blue%20n°%2014%20%28%20COLIPA%20n°%20C172%29>
+        a             ont:Report ;
+        rdfs:label    "HC Blue n° 14 ( COLIPA n° C172)" ;
+        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/HC%20Blue%20n°%2014%20%28%20COLIPA%20n°%20C172%29> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_062.pdf> .
 
 <http://toxin.vub.be/resource/chemicalidentity/vitamin%20a>
         a                      ont:Compound ;
@@ -873,7 +873,7 @@
 <http://toxin.vub.be/resource/chemicalidentity/Mixture%20of%20HC%20Red%20n°%2010%20%28INCI%29%20and%20HC%20Red%20n°%2011%20%28INCI%29>
         a                              ont:Compound ;
         rdfs:comment                   "the structure of the following impurities is drawn in the opinion: 5-Chloro-2-nitro-p-phenylenediamine, Impurities A-E." ;
-        rdfs:label                     "HC Red n° 11" , "hc red n° 11" , "HC Red n° 10" , "hc red n° 10" , "Mixture of HC Red n° 10 (INCI) and HC Red n° 11 (INCI)" ;
+        rdfs:label                     "HC Red n° 11" , "hc red n° 11" , "HC Red n° 10" , "Mixture of HC Red n° 10 (INCI) and HC Red n° 11 (INCI)" , "hc red n° 10" ;
         ont:CAS_number                 "95576-92-4" , "95576-89-9" ;
         ont:EC_number                  "Rot y or Rubinrot Y: 408-240-1 (1-amino-2-nitro-4-(2',3'-dihydroxypropyl)amino-5-\r\nchlorobenzene and 1,4-bis-(2',3'-dihydroxypropyl)amino-2-nitro-5- chlorobenzene)" ;
         ont:INCI                       "HC Red n° 11" , "HC Red n° 10" ;
@@ -895,12 +895,6 @@
         ont:primary_name               "Mixture of HC Red n° 10 (INCI) and HC Red n° 11 (INCI)" ;
         ont:purity                     "HC Red n° 10 and HC Red n° 11 were chemically characterised by NMR spectroscopy. table 1: comparison of different batches. description of sample: L4/141 (V07/600pf) ; 9375 (R00058409) ; 228-41185 ; LEH5/1; analysis reference: G 2005/008 ; A 2001/038, G 2005/008 ; A 2002/247, G 2005/008 ; G 2005/008; NMR content (%, w/w):HC Red n° 10 – HC Red n° 11 : 55.0 – 40.2 ; 57.2 – 32.8 ; 53.0 – 38.6 ; 43.6 – 21.3; HPLC purity (area%) (parameters same as for determination of impurity A): 210 nm (HC Red n° 10_HC Red n° 11) – 254 nm (HC Red n° 10_HC Red n° 11) – 500 nm (HC Red n° 10_HC Red n° 11): 60.0_33.6 – 58.4_37.0 – 58.0_38.5 ; 62.7_33.6 – 62.5_34.9 – 62.2_35.9 ; 60.9_36.5 – 59.2_38.7 – 59.3_39.5 ; 65.0_24.2 – 64.5_27.4 – 65.2_29.1; HPLC content (%, w/w) (HC Red n° 10 – HC Red n° 11): 51.8 – 35.4 ; 53.6 – 32.3 ; 53.2 – 38.4 ; 40.3 – 19.3; (5-Chloro-2-nitro-p-phenylene-diamine), Rot C %, w/w: 0.24 ; 0.14 ; 0.35 ; 0.48; Impurity A %, w/w: 0.21 ; 0.16 ; 0.21 ; 0.15; Impurity B Sum of 2 isomers %, w/w: 0.65 ; 0.7 ; 0.91 ; 0.2; Impurity C %, w/w: 1.2 ; 1.8 ; 1.2 ; 2.2; Impurity D %, w/w: 0.19 ; 0.64 ; 0.19 ; 0.43; Impurity E %, w/w: 0.35 ; 0.2 ; 0.44 ; 0.67; 2-Chloro-1,4-diaminobenzene (ppm): not detected, LOD = 10 ppm ; not detected, LOD = 10 ppm ; not detected, LOD = 10 ppm ; not detected, LOD = 10 ppm; Content of Chloride %, w/w: 0.07 ; 0 ; *; 6.28; Water content %, w/w: 0.94 ; 1.66 ; * ; 1.69; Loss on drying %, w/w: 0.37 ; 2.1 ; * ; 1.34; Sulphated ash %, w/w: 0.15 ; 2.7 ; * ; 5.95; Element analysis (ppm): Na 369, Mg 25, Si 110, Ca 174, Fe 13, Br 28 ; not analysed ; Na 400, Mg 23, Si 100, Ca 150, Br 21 ; Na 896, Si 98, K 25600, Ca 50, Fe 492, Pb 25; Mass balance: 98.6 ; 98.4 ; 94.9 ; 76.3. * Not determined because lack of substance. Declaration by the applicant: “.........batch LEH5/1 does not represent the market quality. It was however included in the batch comparison as it was used as undiluted test material to determine skin and eye irritation potential, and was found to be non irritant for both endpoints. athough the content of batch LEH5/1 deviates from the current market specification, the results obtained with this batch are considered sufficiently reliable to evaluate the skin and eye irritation potential of b071 under use conditions. a maximum use concentration of 2 % is unlikely to cause skin and eye irritation......”. " ;
         ont:vapour_pressure            "13.9 hpa (25 °c) (oecd 104) (ref. 6)" .
-
-<http://toxin.vub.be/resource/dossier/hydroxyethyl-p-phenylenediamine%20sulfate>
-        a             ont:Report ;
-        rdfs:label    "hydroxyethyl-p-phenylenediamine sulfate" ;
-        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/hydroxyethyl-p-phenylenediamine%20sulfate> ;
-        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_017.pdf> .
 
 <http://toxin.vub.be/resource/chemicalidentity/Decamethylcyclopentasiloxane>
         a                          ont:Compound ;
@@ -924,6 +918,12 @@
         ont:purity                 "according to the applicant, the tests used samples of high purity of D5 (95% to > 99%) with pivotal long term toxicity studies conducted using the same batch of D5 (BxWCO 15338, > 99% pure). " ;
         ont:vapour_pressure        "33.2 pa at 25°C (ref7)" ;
         ont:viscosity              "3.87 cst (ref 7)" .
+
+<http://toxin.vub.be/resource/dossier/hydroxyethyl-p-phenylenediamine%20sulfate>
+        a             ont:Report ;
+        rdfs:label    "hydroxyethyl-p-phenylenediamine sulfate" ;
+        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/hydroxyethyl-p-phenylenediamine%20sulfate> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_017.pdf> .
 
 <http://toxin.vub.be/resource/chemicalidentity/5%2C6%2C5’%2C6’-tetraphenyl-3%2C3%27-%281%2C4-phenylene%29bis%5B1%2C2%2C4-triazine%5D>
         a                              ont:Compound ;
@@ -980,12 +980,6 @@
         ont:vapour_pressure            "5.5x10-6 Pa (non-charged molecule at 25 °C) (calculated)" ;
         ont:viscosity                  "/" .
 
-<http://toxin.vub.be/resource/dossier/acid%20black%201>
-        a             ont:Report ;
-        rdfs:label    "acid black 1" ;
-        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/acid%20black%201> ;
-        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_018.pdf> .
-
 <http://toxin.vub.be/resource/chemicalidentity/basic%20yellow%2087>
         a                              ont:Compound ;
         rdfs:label                     "basic yellow 87" ;
@@ -1004,6 +998,12 @@
         ont:partition_coefficient      " -1.69 (oecd 107, flash-shaking method) ref.: b" ;
         ont:physical_form              "yellow solid" ;
         ont:purity                     "purity and impurities for batch lot 04143CL2: identity of batch lot 04143CL2 was confirmed by 1H-NMR, 13C-NMR, ir, uv at 415 nm. purity was determined by hplc-uv at 430 nm after chromatographic separation to be 61.1%. methyl sulphate content was 35.7%, determined by ic. loss on drying: 0.6%. water: 0.3%. elemental analysis: 49.7% C, 11.4% N, 1.3% Na. metal impurities: antimony (< 2 mg/kg), arsenical (< 2 mg/kg), barium (< 2 mg/kg), bismuth (< 2 mg/kg), cadmium (< 1 mg/kg), chromium(< 2 mg/kg), copper (< 2 mg/kg), lead (< 2 mg/kg), manganese (< 2 mg/kg), mercury (< 1 mg/kg), nickel (< 2 mg/kg), silver (< 2 mg/kg), tin (< 2 mg/kg). batch lot 028400A8AA: identity was confirmed by ir and uv-vis. purity was determined by hplc as 90.5% and by uv-vis as 87.7%. content of: water (0.2%), 2-propanol (0.1%), chloride (<0.1%), sodium (1.6%), sulphate (0.9%), methylsulfate (7.5%). batch CGF-F016737.0016 (comment: no further details available): purity was determined by hplc to be 92.2% and by uv-vis to be 92.9%. impurities by hplc: < 0.1%; content of water: 0.2% by karl fischer; content of sodium methyl sulphate:7.5 % by ion chromatography. batch CGF-F016737/0013 (comment: no further details available): identity was confirmed by ir and uv-vis spectroscopy. purity was determined by hplc as 88.6%. content of: water (0.5%), sodium (1.1%), chloride (< 0.1%), methylsulfate (7.4%), sulphate (<0.1%), 2-propanol (<0.1%) (ref.: lot 0013(b117))." .
+
+<http://toxin.vub.be/resource/dossier/acid%20black%201>
+        a             ont:Report ;
+        rdfs:label    "acid black 1" ;
+        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/acid%20black%201> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_018.pdf> .
 
 <http://toxin.vub.be/resource/chemicalidentity/1-hexyl%204%2C5-diamino%20pyrazole%20sulfate>
         a                          ont:Compound ;
@@ -1776,12 +1776,6 @@
         ont:purity                     "batch gst 4-11029: purity (hplc): 210 nm 99.9 %, 254 nm 100.0 %, 434 nm 100.0 %. purity (nmr): 100.0 %. loss on drying: 0.010 %. water content: 0.017 %. sulphate ash: 0.009 %. batch l6/186: purity (hplc): 210 nm 99.9 %, 254 nm 100.0 %, 434 nm 99.9 % %. purity (nmr): 99.8 %. loss on drying: 0.015 %. water content: 0.037 %. sulphate ash: 0.059 %. the identity and content of the test substances, batch gst 4-11019 and l6/186 were analysed by means of nmr. for further purity tests hplc- uv(dad) was used. two possible minor components, 3-aminopyridine and 2,6-diaminopyridine, were searched for in these hplc examinations. furthermore ir and uv spectra were recorded and the contents of water, loss on drying and sulphated ash were determined. the reference substances for b111 (r0075; 99.9%), which was registered in accordance with SOP- F01 has been supplied by the applicant. identity: 1H-nmr spectra of the test substance were performed in dmso-d6/MeOD (1:1). purity was determined by comparing the integrated signals of the test substance with the spectra of the internal standards, dimethylaminobenzoic acid ethyl ester (dbee) and thymole (thym). 1H-nmr spectra confirmed the identity of test substance. the content of b111 was quantified as >99.8%. purity and impurities were determined by hplc at λ=210, 254 and 434 nm. purity was >99.9%. UV spectra were recorded from 200-800 nm in ethanol. ir spectra were performed with potassium bromide pellets within the range of 4000-400 cm-1. uv and ir spectra confirmed the proposed structure." ;
         ont:vapour_pressure            "5.0 x 10-10 hPa (20 °C)" .
 
-<http://toxin.vub.be/resource/dossier/basic%20yellow%2087>
-        a             ont:Report ;
-        rdfs:label    "basic yellow 87" ;
-        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/basic%20yellow%2087> ;
-        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_081.pdf> .
-
 <http://toxin.vub.be/resource/chemicalidentity/trisodium%20nitrilotriacetate>
         a                          ont:Compound ;
         rdfs:label                 "trisodium nitrilotriacetate" , "trisodium NTA" ;
@@ -1800,6 +1794,12 @@
         ont:physical_form          "colourless crystalline powder" ;
         ont:primary_name           "trisodium nitrilotriacetate" ;
         ont:purity                 "≥ 92% w/w" .
+
+<http://toxin.vub.be/resource/dossier/basic%20yellow%2087>
+        a             ont:Report ;
+        rdfs:label    "basic yellow 87" ;
+        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/basic%20yellow%2087> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_081.pdf> .
 
 <http://toxin.vub.be/resource/dossier/2-hydroxyethylamino-5-nitroanisole>
         a             ont:Report ;
@@ -1877,23 +1877,17 @@
         ont:physical_form              "light-medium beige powder" ;
         ont:purity                     "purity: 97.8%, impurities: <0.5 %, loss on drying: <0.5 %, residue on ignition: <0.5% (no information on different batches provided)" .
 
-<http://toxin.vub.be/resource/dossier/butylphenyl%20methylpropional%20%28p-bmhca%29>
-        a             ont:Report ;
-        rdfs:label    "butylphenyl methylpropional (p-bmhca)" ;
-        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/butylphenyl%20methylpropional%20%28p-bmhca%29> ;
-        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fsystem%2Ffiles%2F2021-08%2Fsccs_o_213_0.pdf> .
-
 <http://toxin.vub.be/resource/dossier/zinc%20pyrithione>
         a             ont:Report ;
         rdfs:label    "zinc pyrithione" ;
         ont:contains  <http://toxin.vub.be/resource/chemicalidentity/zinc%20pyrithione> ;
         ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_133.pdf%20%26%20https%3A%2F%2Fec.europa.eu%2Fhealth%2Fsites%2Fhealth%2Ffiles%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_236.pdf> .
 
-<http://toxin.vub.be/resource/dossier/hc%20red%20n°%2010>
+<http://toxin.vub.be/resource/dossier/butylphenyl%20methylpropional%20%28p-bmhca%29>
         a             ont:Report ;
-        rdfs:label    "hc red n° 10" ;
-        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/Mixture%20of%20HC%20Red%20n°%2010%20%28INCI%29%20and%20HC%20Red%20n°%2011%20%28INCI%29> ;
-        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_064.pdf> .
+        rdfs:label    "butylphenyl methylpropional (p-bmhca)" ;
+        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/butylphenyl%20methylpropional%20%28p-bmhca%29> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fsystem%2Ffiles%2F2021-08%2Fsccs_o_213_0.pdf> .
 
 <http://toxin.vub.be/resource/chemicalidentity/basic%20orange%2031>
         a                              ont:Compound ;
@@ -1913,6 +1907,33 @@
         ont:partition_coefficient      "-2.13 oecd method 107 (1981)" ;
         ont:physical_form              "violet/brown or dark red powder" ;
         ont:purity                     "the chemical characterisation of basic orange 31 was performed by ir and uv-vis spectroscopy. the purity and impurities of batches of mip orange 3100 (028407a2 and 028334a2) used for the studies listed in the dossier. batch 028407a2: measured purity active (%): 98.5. batch 028334a2 :measured purity active (%): 97.3. quantification of mip orange 3100: hplc-ms and uv-vis detection and quantified using external standard." .
+
+<http://toxin.vub.be/resource/dossier/hc%20red%20n°%2010>
+        a             ont:Report ;
+        rdfs:label    "hc red n° 10" ;
+        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/Mixture%20of%20HC%20Red%20n°%2010%20%28INCI%29%20and%20HC%20Red%20n°%2011%20%28INCI%29> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_064.pdf> .
+
+<http://toxin.vub.be/resource/chemicalidentity/hc%20red%20n°%2016>
+        a                              ont:Compound ;
+        rdfs:label                     "hc red n° 16" ;
+        ont:CAS_number                 "160219-76-1" ;
+        ont:EC_number                  "/ (substance not in use in eu)" ;
+        ont:INCI                       "hc red n° 16" ;
+        ont:SMILES                     "C=CCNC1=C(C=C(C=C1)N)[N+](=O)[O-]" ;
+        ont:UV_Vis_spectrum            "λmax at 247nm and 505 nm" ;
+        ont:additional_info            "general comments on physico-chemical characterization: - hc red n° 16 is not registered under the chemical legislation in the EU. - hplc identification and purity measurement was performed at 246 nm, but not at the specific wavelength (505 nm). - the log pow strongly depends on the pH, especially for ionisable molecules, zwitterions etc. therefore, a single calculated value of log pow, usually without any reference to the respective pH, cannot be correlated to physiological conditions and to the pH conditions of the percutaneous absorption studies. - the stability of hc red n° 16 in various test formulations and in typical hair dye formulations is not reported. the stability under oxidative conditions was not demonstrated. – hc red n° 16 is a secondary amine, and thus is prone to nitrosation. it should not be used in combination with nitrosating substances. the nitrosamine content should be < 50 ppb. " ;
+        ont:empirical_formula          "C9H11N3O2" ;
+        ont:function_and_uses          "hc red n° 16 is used as a direct hair dye in hair colouring products. it can also be used in oxidative hair dye formulations with and without mixing with an oxidising agent (e.g. hydrogen peroxide). the final concentration on head of hc red n° 16 can be up to 1.5% when it is used without an oxidising agent and up to 0.75% after mixing with an oxidising agent." ;
+        ont:homogeneity_and_stability  "stability of hc red n° 16 in various test formulations is not reported. the stability under oxidative conditions was not reported." ;
+        ont:impurity                   "batch ro-el 5040/24: 1.2% (w/w) 4-fluoro-3-nitroaniline; total fluorine content: 0.2% (w/w) (ref.: 2); batch ro-el 5622/134 = sat 950726: 0.7% (w/w) 4-fluoro-3-nitroaniline; total fluorine content: 0.1% (w/w) (ref.: 3); batch ro-rn6794-107 = sat 040282: solvent content (water): <0.1% (w/w), 0.19% (w/w) 4-fluoro-3-nitroaniline 4-hydroxy-3-nitroaniline, not detected (ref.: 4); other impurities: Pb < 20 ppm, Sb and Ni < 10 ppm, As and Cd < 5 ppm, Hg < 1 ppm (ref.: 1); declaration concerning hc red n° 16 used in the marketed products: impurities: 4-fluoro-3-nitroaniline < 0.5% (w/w)" ;
+        ont:inorganic_solvents         "water: < 1 g/l (room temperature)." ;
+        ont:melting_point              "77–84" ;
+        ont:molecularweight            "193.2" ;
+        ont:organic_solvents           "ethanol: 5 - 50 g/l (room temperature); dmso: > 100 g/l (room temperature)" ;
+        ont:partition_coefficient      "1.4 (calculated)" ;
+        ont:physical_form              "dark brown-black crystals" ;
+        ont:purity                     "batch ro-el 5040/24: purity by nmr assay: 94% (w/w); purity by hplc assay: > 98% (peak area) (ref.: 2); batch ro-el 5622/134 = sat 950726: purity by hplc assay: 99.2% (peak area) (ref.: 3); batch ro-rn6794-107 = sat 040282: purity by nmr assay: 98.6% (w/w); purity by hplc assay: 98.7% (peak area); sulphated ash content: <0.1% (w/w) (ref.: 4);); declaration concerning hc red n° 16 used in the marketed products: purity by nmr assay: > 98.0% (w/w), purity by hplc assay: > 98.0% (area), solvent content (water): < 0.5% (w/w)." .
 
 <http://toxin.vub.be/resource/chemicalidentity/2-amino-5-ethylphenol%20HCl>
         a                              ont:Compound ;
@@ -1938,27 +1959,6 @@
         ont:primary_name               "2-amino-5-ethylphenol HCl" ;
         ont:purity                     "the identification of 2-amino-5-ethylphenol HCl in the batch rd-cru 079-16/97-05 was performed by nmr comparison of batches of 2-amino-5-ethylphenol HCl. rd-cru 079- 16/97-05; nmr content (salt) / %, w/w:  99.4. hplc*** purity / area% 210 nm - 254 nm - 290 nm: 99.8 – 99.6 – 99.9. hplc content (w/w): 99.9.  lot 07290T0010; hplc*** purity / area% 210 nm - 254 nm - 290 nm: 100 – 100 – 100. hplc content (w/w): 98.3. lot 07290T0014; hplc*** purity / area% 210 nm - 254 nm - 290 nm: 100 – 100 – 100. hplc content (w/w): 101.6. gst079-03/33- 08 (in form of the phosphate salt); nmr content (salt) / %, w/w: 96.5*. HPLC*** purity / area% 210 nm - 254 nm - 290 nm: 99.8 – 99.6 – 99.6. loss on drying / %, w/w: 0.08. gst079-03/52- 09 (in form of the phosphate salt); nmr content (salt) / %, w/w: 98.0. hplc*** purity / area% 210 nm - 254 nm - 290 nm: 99.8 – 99.9 – 99.9. hplc content (w/w): 98.8**. *: the nmr showed small traces of 2-propanol. **: as H3PO4 salt. ***: column 250/4 nucleosil 100-5 C18 Nautilus; CH3CN:0,02M KH4PO4 pH 5,0; 30:70, 1 mL/min, 40 °C. the conversion factor from 2-amino-5-ethylphenol phosphate to 2-amino-5- ethylphenol hydrochloride is calculated as follows: factor = molecular weight [2-amino-5-ethylphenolhydrochloride] (173.64 g/mol) / molecular weight [2-amino-5-ethylphenol phosphate] (235.18 g/mol) = 0.738. comment: no documentation was provided for the chemical characterisation of batches lot 07290T0010, lot 07290T0014, gst079-03/33-08 and gst079-03/52-09." ;
         ont:vapour_pressure            "4.1 exp-8 hPa (20 °C, extrapolated)" .
-
-<http://toxin.vub.be/resource/chemicalidentity/hc%20red%20n°%2016>
-        a                              ont:Compound ;
-        rdfs:label                     "hc red n° 16" ;
-        ont:CAS_number                 "160219-76-1" ;
-        ont:EC_number                  "/ (substance not in use in eu)" ;
-        ont:INCI                       "hc red n° 16" ;
-        ont:SMILES                     "C=CCNC1=C(C=C(C=C1)N)[N+](=O)[O-]" ;
-        ont:UV_Vis_spectrum            "λmax at 247nm and 505 nm" ;
-        ont:additional_info            "general comments on physico-chemical characterization: - hc red n° 16 is not registered under the chemical legislation in the EU. - hplc identification and purity measurement was performed at 246 nm, but not at the specific wavelength (505 nm). - the log pow strongly depends on the pH, especially for ionisable molecules, zwitterions etc. therefore, a single calculated value of log pow, usually without any reference to the respective pH, cannot be correlated to physiological conditions and to the pH conditions of the percutaneous absorption studies. - the stability of hc red n° 16 in various test formulations and in typical hair dye formulations is not reported. the stability under oxidative conditions was not demonstrated. – hc red n° 16 is a secondary amine, and thus is prone to nitrosation. it should not be used in combination with nitrosating substances. the nitrosamine content should be < 50 ppb. " ;
-        ont:empirical_formula          "C9H11N3O2" ;
-        ont:function_and_uses          "hc red n° 16 is used as a direct hair dye in hair colouring products. it can also be used in oxidative hair dye formulations with and without mixing with an oxidising agent (e.g. hydrogen peroxide). the final concentration on head of hc red n° 16 can be up to 1.5% when it is used without an oxidising agent and up to 0.75% after mixing with an oxidising agent." ;
-        ont:homogeneity_and_stability  "stability of hc red n° 16 in various test formulations is not reported. the stability under oxidative conditions was not reported." ;
-        ont:impurity                   "batch ro-el 5040/24: 1.2% (w/w) 4-fluoro-3-nitroaniline; total fluorine content: 0.2% (w/w) (ref.: 2); batch ro-el 5622/134 = sat 950726: 0.7% (w/w) 4-fluoro-3-nitroaniline; total fluorine content: 0.1% (w/w) (ref.: 3); batch ro-rn6794-107 = sat 040282: solvent content (water): <0.1% (w/w), 0.19% (w/w) 4-fluoro-3-nitroaniline 4-hydroxy-3-nitroaniline, not detected (ref.: 4); other impurities: Pb < 20 ppm, Sb and Ni < 10 ppm, As and Cd < 5 ppm, Hg < 1 ppm (ref.: 1); declaration concerning hc red n° 16 used in the marketed products: impurities: 4-fluoro-3-nitroaniline < 0.5% (w/w)" ;
-        ont:inorganic_solvents         "water: < 1 g/l (room temperature)." ;
-        ont:melting_point              "77–84" ;
-        ont:molecularweight            "193.2" ;
-        ont:organic_solvents           "ethanol: 5 - 50 g/l (room temperature); dmso: > 100 g/l (room temperature)" ;
-        ont:partition_coefficient      "1.4 (calculated)" ;
-        ont:physical_form              "dark brown-black crystals" ;
-        ont:purity                     "batch ro-el 5040/24: purity by nmr assay: 94% (w/w); purity by hplc assay: > 98% (peak area) (ref.: 2); batch ro-el 5622/134 = sat 950726: purity by hplc assay: 99.2% (peak area) (ref.: 3); batch ro-rn6794-107 = sat 040282: purity by nmr assay: 98.6% (w/w); purity by hplc assay: 98.7% (peak area); sulphated ash content: <0.1% (w/w) (ref.: 4);); declaration concerning hc red n° 16 used in the marketed products: purity by nmr assay: > 98.0% (w/w), purity by hplc assay: > 98.0% (area), solvent content (water): < 0.5% (w/w)." .
 
 <http://toxin.vub.be/resource/chemicalidentity/acid%20black%201>
         a                              ont:Compound ;
@@ -2270,18 +2270,6 @@
         ont:primary_name               "2,6-diaminopyridine" ;
         ont:purity                     "3 batches: a1426, a3221, a9554. potentiometric titration: a3221 = 99.7%; purity by nitrogen content: a1426 = 96.42%, a3221 = 97.76%, a9554 = 97.5%; purity by gas chromatography: a1426 = 99.98%, a3221 = 99.86%, a9554 = 99.99%.  " .
 
-<http://toxin.vub.be/resource/dossier/HC%20Orange%20No.%206%20%28B125%29>
-        a             ont:Report ;
-        rdfs:label    "HC Orange No. 6 (B125)" ;
-        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/HC%20Orange%20No.%206> ;
-        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fhealth.ec.europa.eu%2Fsystem%2Ffiles%2F2018-05%2Fsccs_o_201_0.pdf> .
-
-<http://toxin.vub.be/resource/dossier/hydroxyethoxyphenyl%20butanone>
-        a             ont:Report ;
-        rdfs:label    "hydroxyethoxyphenyl butanone" ;
-        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/hydroxyethoxyphenyl%20butanone> ;
-        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fsites%2Fhealth%2Ffiles%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_225.pdf> .
-
 <http://toxin.vub.be/resource/chemicalidentity/toluene-2%2C5-diamine>
         a                              ont:Compound ;
         rdfs:comment                   "toluene-2,5-diamine" , "the section regarding test identity and imputities is coming from several submissions and the amount of data is large. it's been resumed as in the corresponding cells but it can definitely be revised again." ;
@@ -2307,6 +2295,18 @@
         ont:primary_name               "toluene-2,5-diamine" ;
         ont:purity                     "> 99% (50% aqueous solution)" ;
         ont:vapour_pressure            "3.40E-03 (0.0034) mm Hg at 25 °C" .
+
+<http://toxin.vub.be/resource/dossier/hydroxyethoxyphenyl%20butanone>
+        a             ont:Report ;
+        rdfs:label    "hydroxyethoxyphenyl butanone" ;
+        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/hydroxyethoxyphenyl%20butanone> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fec.europa.eu%2Fhealth%2Fsites%2Fhealth%2Ffiles%2Fscientific_committees%2Fconsumer_safety%2Fdocs%2Fsccs_o_225.pdf> .
+
+<http://toxin.vub.be/resource/dossier/HC%20Orange%20No.%206%20%28B125%29>
+        a             ont:Report ;
+        rdfs:label    "HC Orange No. 6 (B125)" ;
+        ont:contains  <http://toxin.vub.be/resource/chemicalidentity/HC%20Orange%20No.%206> ;
+        ont:seeAlso   <http://toxin.vub.be/resource/pdfLink/https%3A%2F%2Fhealth.ec.europa.eu%2Fsystem%2Ffiles%2F2018-05%2Fsccs_o_201_0.pdf> .
 
 <http://toxin.vub.be/resource/dossier/hc%20red%20n°%2013>
         a             ont:Report ;
@@ -2458,20 +2458,6 @@
         ont:purity                     "≥94 % (3)(5) / ≥96 % (3)*" ;
         ont:specific_gravity           "0.4-0.65 (5), 0.65-0.9 (3)* at 20 °C" .
 
-<http://toxin.vub.be/resource/chemicalidentity/potassium%20o-phenylphenate>
-        a                      ont:Compound ;
-        rdfs:comment           "potassium o-phenylphenate" ;
-        rdfs:label             "potassium o-phenylphenate" , "o-phenylphenol, sodium o-phenylphenate and potassium o-phenylphenate" ;
-        ont:CAS_number         "13707-65-8" ;
-        ont:EC_number          "237-243-9" ;
-        ont:INCI               "potassium o-phenylphenate" ;
-        ont:SMILES             "C1=CC=C(C=C1)C2=CC=CC=C2[O-].[K+]" ;
-        ont:chemical_identity  "potassium o-phenylphenate" ;
-        ont:empirical_formula  "C12H9OK" ;
-        ont:function_and_uses  "OPP and its sodium and potassium salts are used as active ingredients in broad-spectrum fungicides surface biocides. under EU biocidal regulation ((EU) 528/2012), OPP has been evaluated for the following product types (PTs): PT 6.01: in can preservative for detergents and household cleaning products with the concentration of OPP in preserved products ranging between 0.1 % to 0.5% w/w; PT 6.02: preservation of paper additives. in addition, the biocidal product committee opinion has been published for PTs 1, 2 and 13 and further discussions are ongoing (see http://echa.europa.eu/web/guest/regulations/biocidal-productsregulation/approval-of-active-substances/bpc-opinions-on-active-substance-approval ). OPP in 2 % [w/v] formulations is used for hygienic hand disinfection and hand decontamination in hospitals and medical practice by professional users. OPP is approved as a preservative in cosmetic formulations according to Commission regulation 1223/2009/EC, its amendments and adaptations. it is listed in Annex V with a maximum authorised concentration of 0.2% without any limitations and requirements, conditions of use and warnings which must be printed on the label. OPP and its sodium salt are also used for inhibition of mould growth on citrus" ;
-        ont:molecularweight    "208.3" ;
-        ont:primary_name       "potassium o-phenylphenate" .
-
 <http://toxin.vub.be/resource/chemicalidentity/basic%20red%2076>
         a                              ont:Compound ;
         rdfs:comment                   "the identity of the test substance in batch 0050644101 (sat 040267), 0057891101 (sat 050017) and 12/13b (sat 050529) was confirmed by 1H-, 13C-, DEPT and 2D-NMR-, IR- and UV-spectrometry. all spectra were in good accordance with the expected results. " ;
@@ -2493,6 +2479,20 @@
         ont:physical_form              "red fine powder" ;
         ont:primary_name               "basic red 76" ;
         ont:purity                     "purity of the test substance was quantified in D2O against Na-acetate as standard based on 1h-nmr. 1h-, 13c-, dept and 2d-nmr- were performed in D2O and dmso for further confirmation of identity. uv-vis-spectra showed maxima at the wavelength 235 nm, 332 nm and 503 nm. purity and impurities (reference - dye content by nmr (w/w) - purity by hplc (area)): batch 0050644101 (sat 040267): (2 - 62% - 98.1%); batch 0057891101 (sat 050017): (3 - 80.5% - 98.6%); batch 12/13b (sat 050529): (4 - 89.1% - 98.5%); material used in the market: (1 - > 77% - > 97%)" .
+
+<http://toxin.vub.be/resource/chemicalidentity/potassium%20o-phenylphenate>
+        a                      ont:Compound ;
+        rdfs:comment           "potassium o-phenylphenate" ;
+        rdfs:label             "potassium o-phenylphenate" , "o-phenylphenol, sodium o-phenylphenate and potassium o-phenylphenate" ;
+        ont:CAS_number         "13707-65-8" ;
+        ont:EC_number          "237-243-9" ;
+        ont:INCI               "potassium o-phenylphenate" ;
+        ont:SMILES             "C1=CC=C(C=C1)C2=CC=CC=C2[O-].[K+]" ;
+        ont:chemical_identity  "potassium o-phenylphenate" ;
+        ont:empirical_formula  "C12H9OK" ;
+        ont:function_and_uses  "OPP and its sodium and potassium salts are used as active ingredients in broad-spectrum fungicides surface biocides. under EU biocidal regulation ((EU) 528/2012), OPP has been evaluated for the following product types (PTs): PT 6.01: in can preservative for detergents and household cleaning products with the concentration of OPP in preserved products ranging between 0.1 % to 0.5% w/w; PT 6.02: preservation of paper additives. in addition, the biocidal product committee opinion has been published for PTs 1, 2 and 13 and further discussions are ongoing (see http://echa.europa.eu/web/guest/regulations/biocidal-productsregulation/approval-of-active-substances/bpc-opinions-on-active-substance-approval ). OPP in 2 % [w/v] formulations is used for hygienic hand disinfection and hand decontamination in hospitals and medical practice by professional users. OPP is approved as a preservative in cosmetic formulations according to Commission regulation 1223/2009/EC, its amendments and adaptations. it is listed in Annex V with a maximum authorised concentration of 0.2% without any limitations and requirements, conditions of use and warnings which must be printed on the label. OPP and its sodium salt are also used for inhibition of mould growth on citrus" ;
+        ont:molecularweight    "208.3" ;
+        ont:primary_name       "potassium o-phenylphenate" .
 
 <http://toxin.vub.be/resource/chemicalidentity/hc%20red%20n°%203>
         a                              ont:Compound ;

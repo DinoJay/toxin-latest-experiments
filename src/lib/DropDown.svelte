@@ -12,16 +12,9 @@
 	// });
 </script>
 
-<div id="list1" class="dropdown-check-list w-full visible" tabindex="100">
-	<span class="w-full anchor border" on:click={() => (visible = !visible)}
-		><slot name="title" /></span
-	>
-	{#if visible}
-		<ul transition:slide class="items border max-h-80 overflow-y-auto p-3">
-			<slot />
-		</ul>
-	{/if}
-</div>
+<ul transition:slide class="items h-40 overflow-y-auto ">
+	<slot />
+</ul>
 
 <style>
 	.dropdown-check-list {
