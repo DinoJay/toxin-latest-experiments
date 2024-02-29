@@ -10,18 +10,19 @@
 
 	const host = 'https://qsar.wise.vub.ac.be';
 
+	console.log('CAS NUMBER', cas);
 	const q = `/api/v6/Search/cas/${cas}/true`;
 
-	// console.log('query', `${host}${q}`);
+	console.log('query', `${host}${q}`);
 
 	let profilingPromise = fetch(`${host}${q}`)
 		.then((res) => res.json())
 		.then((res) => {
-			// console.log('res', res);
+			console.log('res', res);
 			return res.length > 0 ? res[0].ChemId : null;
 		})
 		.then((chemId) => {
-			// console.log('chemId', chemId);
+			console.log('chemId', chemId);
 			const metabolismSims = `/api/v6/metabolism`;
 			const promiseMetabolism = fetch(`${host}${metabolismSims}`)
 				.then((res) => res.json())

@@ -14,6 +14,7 @@
 	import transformObject from '$lib/transformObject';
 	import Panel from '$lib/Panel.svelte';
 	import DropDown from '$lib/DropDown.svelte';
+	import uniqBy from '$lib/uniqBy';
 
 	let promise;
 
@@ -30,7 +31,7 @@
 		const { bindings } = d?.results;
 		const data = bindings.map(transformObject).map((d) => d.label);
 		// console.log('data', data);
-		previewValues = data;
+		previewValues = [...new Set(data)];
 	});
 
 	$: filteredPreviewValues =
@@ -57,7 +58,12 @@
 			console.log('res Search', res);
 
 			const { bindings } = res?.results;
-			const data = bindings.map(transformObject);
+			console.log('BIndings', bindings);
+			const data = uniqBy(
+				bindings.map(transformObject).filter((d) => !!d.cas_number),
+				'label'
+			);
+			console.log('data', data);
 			return {
 				...res,
 				data,
@@ -97,7 +103,7 @@
 	<button class="border p-2 mt-3 w-full" type="submit">Go!</button>
 </form>
 
-<div class="border mt-3 p-3 flex flex-col flex-grow">
+<div class=" mt-3 p-3 flex flex-col flex-grow">
 	{#if promise}
 		{#await promise}
 			<p>...waiting</p>

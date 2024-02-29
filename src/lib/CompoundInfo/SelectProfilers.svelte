@@ -2,8 +2,9 @@
 	import uniqBy from '$lib/uniqBy';
 
 	import DropDown from '$lib/DropDown.svelte';
-	import { each } from 'svelte/internal';
 	export let data;
+
+	console.log('OECD data', data);
 
 	let selectedProfilerTypes = [];
 
@@ -13,7 +14,7 @@
 		selectedProfilerTypes.filter((e) => e.profilerType !== profilerType);
 
 	const onChange = (d) => {
-		if (containsProfiler(d.ProfilerGuid)) {
+		if (containsProfiler(d.profilerType)) {
 			selectedProfilerTypes = removeProfiler(d.profilerType);
 		} else {
 			selectedProfilerTypes = [d, ...selectedProfilerTypes];
@@ -47,12 +48,12 @@
 			<li class="mb-6">
 				<div class="flex items-center">
 					<div class="font-bold ">{d.profilerType}</div>
-					<input
+					<!-- <input
 						class="ml-auto"
 						type="checkbox"
 						on:change={() => onChange(d)}
 						checked={containsProfiler(d.profilerType)}
-					/>
+					/> -->
 				</div>
 				<ul>
 					{#each d.profilers as p}
