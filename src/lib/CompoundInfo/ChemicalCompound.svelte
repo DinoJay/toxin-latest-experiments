@@ -73,32 +73,34 @@
 			});
 		}}
 	>
-		<div class="text-xl flex items-center mb-1">
-			<label for="compound">‘CAS No’ or ‘INCI ’ or ‘SMILES’</label>
-			<input
-				bind:value={inputVal}
-				placeholder="Enter or select a compound..."
-				class="border m-1 p-1 flex-grow"
-				type="text"
-				id="compound"
-				name="compound"
-				on:change={(e) => {
-					inputVal = e.target.value;
-				}}
-			/>
-		</div>
-		<DropDown>
-			{#if filteredPreviewValues}
-				{#each filteredPreviewValues as d}
-					<li class="border p-2 mb-1 cursor-pointer" on:click={() => (inputVal = d)}>{d}</li>
-				{/each}
-				{#if filteredPreviewValues.length === 0}
-					<li class=" p-2 mb-1 cursor-pointer">No matches found</li>
+		<div class="bg-gray-50 p-1">
+			<div class="text-xl flex items-center mb-1 ">
+				<label for="compound">‘CAS No’ or ‘INCI ’ or ‘SMILES’</label>
+				<input
+					bind:value={inputVal}
+					placeholder="Enter or select a compound..."
+					class="border m-1 p-1 flex-grow"
+					type="text"
+					id="compound"
+					name="compound"
+					on:change={(e) => {
+						inputVal = e.target.value;
+					}}
+				/>
+			</div>
+			<DropDown>
+				{#if filteredPreviewValues}
+					{#each filteredPreviewValues as d}
+						<li class="border-b p-1 mb-1 cursor-pointer" on:click={() => (inputVal = d)}>{d}</li>
+					{/each}
+					{#if filteredPreviewValues.length === 0}
+						<li class=" p-2 mb-1 cursor-pointer">No matches found</li>
+					{/if}
+				{:else}
+					Loading...
 				{/if}
-			{:else}
-				Loading...
-			{/if}
-		</DropDown>
+			</DropDown>
+		</div>
 		<button class="border-2 p-2 mt-3 w-full " class:opacity-30={disabled} type="submit" {disabled}
 			>Go!</button
 		>

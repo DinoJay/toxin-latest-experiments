@@ -12,7 +12,7 @@
 	// });
 </script>
 
-<ul transition:slide class="items h-40 overflow-y-auto ">
+<ul transition:slide class="items h-40 overflow-y-auto  p-1">
 	<slot />
 </ul>
 
