@@ -7,10 +7,11 @@
 	 * @type {null|string}
 	 */
 	export let height = null;
+	export let open = false;
 
 	export let style = '';
 	export let cls;
-	let expanded = false;
+	let expanded = open;
 
 	let el;
 	$: {
@@ -28,7 +29,7 @@
 
 <!-- Main block -->
 <div
-	class="{expanded ? 'expanded ' : ''} p-2 flex flex-col border-2  {cls}"
+	class="{expanded ? 'expanded ' : ''} p-2 bg-gray-50 flex flex-col border-2  {cls}"
 	{style}
 	style:height={height !== null && expanded ? height : undefined}
 	bind:this={el}

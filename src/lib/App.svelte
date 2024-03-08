@@ -15,7 +15,7 @@
 <div class="mt-3 flex flex-col flex-grow">
 	<Tabs cls="mb-3">
 		<TabItem title="Chemical Compound">
-			<div class="p-2 flex flex-col flex-grow " style="">
+			<div class=" flex flex-col flex-grow " style="">
 				<ChemicalCompoundFilter
 					{...$$props}
 					bind:promise
@@ -27,7 +27,7 @@
 			</div>
 		</TabItem>
 		<TabItem title="Health Effect">
-			<div class="p-2 flex flex-col flex-grow cont">
+			<div class=" flex flex-col flex-grow cont">
 				<HealthEffectFilter
 					{...$$props}
 					bind:promise

@@ -20,13 +20,10 @@
 
 	let inputVal = '';
 	// let imgPromise = null;
-	let compound = null;
-	// const defaultComp = chemicalIdentity.find((d) => d.smiles.toLowerCase() === q.toLowerCase());
-	console.log('chemicalIdentity', chemicalIdentity);
 
 	let previewValues = null;
 
-	const previewValuePromise = constructChemicalIdentitPreviewyQuery().then((d) => {
+	constructChemicalIdentitPreviewyQuery().then((d) => {
 		// console.log('d', d);
 		const { bindings } = d?.results;
 		const data = bindings.map(transformObject).map((d) => d.label);
@@ -39,69 +36,74 @@
 			? previewValues?.filter((d) => d.toLowerCase().includes(inputVal.toLowerCase()))
 			: previewValues;
 	$: console.log('filteredPreviewValues', filteredPreviewValues);
+
+	$: disabled = inputVal === '';
 </script>
 
-<h2 class="text-xl">Chemical Compound</h2>
-<form
-	class=""
-	on:submit={(e) => {
-		e.preventDefault();
-		const trimmed = inputVal.trim();
-		const smilesMatch = !!trimmed.match(smilesRegex);
-		const casMatch = !!trimmed.match(casRegex);
-		let sparqlQueryArg = null;
-		if (casMatch) sparqlQueryArg = { cas: trimmed };
-		else if (smilesMatch) sparqlQueryArg = { smiles: trimmed };
-		else sparqlQueryArg = { inci: trimmed };
+<div class=" p-2">
+	<h2 class="text-xl">Chemical Compound</h2>
+	<form
+		on:submit={(e) => {
+			e.preventDefault();
+			const trimmed = inputVal.trim();
+			const smilesMatch = !!trimmed.match(smilesRegex);
+			const casMatch = !!trimmed.match(casRegex);
+			let sparqlQueryArg = null;
+			if (casMatch) sparqlQueryArg = { cas: trimmed };
+			else if (smilesMatch) sparqlQueryArg = { smiles: trimmed };
+			else sparqlQueryArg = { inci: trimmed };
 
-		promise = constructQuery({ endpoint: CHEMICAL_IDENTITY, ...sparqlQueryArg }).then((res) => {
-			console.log('res Search', res);
+			promise = constructQuery({ endpoint: CHEMICAL_IDENTITY, ...sparqlQueryArg }).then((res) => {
+				console.log('res Search', res);
 
-			const { bindings } = res?.results;
-			console.log('BIndings', bindings);
-			const data = uniqBy(
-				bindings.map(transformObject).filter((d) => !!d.cas_number),
-				'label'
-			);
-			console.log('data', data);
-			return {
-				...res,
-				data,
-				...sparqlQueryArg,
-				imgSrc: e,
-				type: 'compound'
-			};
-		});
-	}}
->
-	<div class="text-xl flex items-center mb-1">
-		<label for="compound">‘CAS No’ or ‘INCI ’ or ‘SMILES’</label>
-		<input
-			bind:value={inputVal}
-			placeholder="Enter or select a compound..."
-			class="border m-1 p-1 flex-grow"
-			type="text"
-			id="compound"
-			name="compound"
-			on:change={(e) => {
-				inputVal = e.target.value;
-			}}
-		/>
-	</div>
-	<DropDown>
-		{#if filteredPreviewValues}
-			{#each filteredPreviewValues as d}
-				<li class="border p-2 mb-1 cursor-pointer" on:click={() => (inputVal = d)}>{d}</li>
-			{/each}
-			{#if filteredPreviewValues.length === 0}
-				<li class=" p-2 mb-1 cursor-pointer">No matches found</li>
+				const { bindings } = res?.results;
+				console.log('BIndings', bindings);
+				const data = uniqBy(
+					bindings.map(transformObject).filter((d) => !!d.cas_number),
+					'label'
+				);
+				console.log('data', data);
+				return {
+					...res,
+					data,
+					...sparqlQueryArg,
+					imgSrc: e,
+					type: 'compound'
+				};
+			});
+		}}
+	>
+		<div class="text-xl flex items-center mb-1">
+			<label for="compound">‘CAS No’ or ‘INCI ’ or ‘SMILES’</label>
+			<input
+				bind:value={inputVal}
+				placeholder="Enter or select a compound..."
+				class="border m-1 p-1 flex-grow"
+				type="text"
+				id="compound"
+				name="compound"
+				on:change={(e) => {
+					inputVal = e.target.value;
+				}}
+			/>
+		</div>
+		<DropDown>
+			{#if filteredPreviewValues}
+				{#each filteredPreviewValues as d}
+					<li class="border p-2 mb-1 cursor-pointer" on:click={() => (inputVal = d)}>{d}</li>
+				{/each}
+				{#if filteredPreviewValues.length === 0}
+					<li class=" p-2 mb-1 cursor-pointer">No matches found</li>
+				{/if}
+			{:else}
+				Loading...
 			{/if}
-		{:else}
-			Loading...
-		{/if}
-	</DropDown>
-	<button class="border p-2 mt-3 w-full" type="submit">Go!</button>
-</form>
+		</DropDown>
+		<button class="border-2 p-2 mt-3 w-full " class:opacity-30={disabled} type="submit" {disabled}
+			>Go!</button
+		>
+	</form>
+</div>
 
 <div class=" mt-3 p-3 flex flex-col flex-grow">
 	{#if promise}
@@ -110,7 +112,7 @@
 		{:then res}
 			{#if res.type === 'compound'}
 				{#each res.data as d}
-					<Panel title={d.label} cls="mb-3">
+					<Panel title={d.label} cls="mb-3" open={res.data.length === 1}>
 						<CompoundInfoWrapper {...d} />
 					</Panel>
 				{/each}

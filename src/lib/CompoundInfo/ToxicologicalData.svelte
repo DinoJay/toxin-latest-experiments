@@ -10,10 +10,6 @@
 	} from '$lib/endpoint_constants';
 	import { transformBindings } from '$lib/sparql';
 
-	export let acuteToxicityCsv = [];
-	export let irritationCorosivityCsv = [];
-	export let repeatedToxicityCsv = [];
-	export let compound;
 	export let label;
 
 	// import Table from '$lib/table.svelte';
