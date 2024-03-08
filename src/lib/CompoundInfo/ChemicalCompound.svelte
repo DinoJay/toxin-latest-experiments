@@ -58,10 +58,7 @@
 
 				const { bindings } = res?.results;
 				console.log('BIndings', bindings);
-				const data = uniqBy(
-					bindings.map(transformObject).filter((d) => !!d.cas_number),
-					'label'
-				);
+				const data = bindings.map(transformObject).filter((d) => !!d.cas_number);
 				console.log('data', data);
 				return {
 					...res,
