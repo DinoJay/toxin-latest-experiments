@@ -15,6 +15,7 @@
 	import Panel from '$lib/Panel.svelte';
 	import DropDown from '$lib/DropDown.svelte';
 	import uniqBy from '$lib/uniqBy';
+	import Spinner from '$lib/Spinner.svelte';
 
 	let promise;
 
@@ -97,7 +98,9 @@
 						<li class=" p-2 mb-1 cursor-pointer">No matches found</li>
 					{/if}
 				{:else}
-					Loading...
+					<div class="flex w-full h-full">
+						<Spinner cls="m-auto" />
+					</div>
 				{/if}
 			</DropDown>
 		</div>
@@ -107,10 +110,12 @@
 	</form>
 </div>
 
-<div class=" mt-3 p-3 flex flex-col flex-grow">
+<div class=" mt-3 p-3 flex flex-col flex-grow w-full">
 	{#if promise}
 		{#await promise}
-			<p>...waiting</p>
+			<div class="flex-grow w-full flex">
+				<Spinner cls="m-auto" />
+			</div>
 		{:then res}
 			{#if res.type === 'compound'}
 				{#each res.data as d}

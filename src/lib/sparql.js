@@ -49,6 +49,7 @@ const chemicalIdentityQuery = ({ smiles, cas, inci, label }) => {
 				${casStr}
 				${inciStr}
 				?compound ?pred ?value .
+				?compound ont:additional_info ?additional_info .
 			}
 	`;
 

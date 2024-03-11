@@ -9,6 +9,7 @@
 		CARCINOGENICIY
 	} from '$lib/endpoint_constants';
 	import { transformBindings } from '$lib/sparql';
+	import Spinner from '$lib/Spinner.svelte';
 
 	export let label;
 
@@ -60,7 +61,7 @@
 	<h2 class="text-xl mb-3">Toxicological Data</h2>
 	<div>
 		{#await acuteToxicityPromise}
-			<div>Loading</div>
+			<Spinner cls="m-auto" />
 		{:then testsByComp}
 			<div>
 				<h3>{testsByComp.length} {label} Opinions found in Acute Toxicity Endpoint</h3>
@@ -70,7 +71,7 @@
 	</div>
 	<div>
 		{#await repeatedDoseToxicityPromise}
-			<div>Loading</div>
+			<Spinner cls="m-auto" />
 		{:then testsByComp}
 			<div>
 				<h3>{testsByComp.length} {label} Opinions found in Repeated Dose Toxicity Endpoint</h3>
@@ -80,7 +81,7 @@
 	</div>
 	<div>
 		{#await skinSensitisationUnmergedPromise}
-			<div>Loading</div>
+			<Spinner cls="m-auto" />
 		{:then testsByComp}
 			<div>
 				<h3>{testsByComp.length} {label} Opinions found in Skin Sensitisation Unmerged Endpoint</h3>
@@ -90,7 +91,7 @@
 	</div>
 	<div>
 		{#await mutagenicityPromise}
-			<div>Loading</div>
+			<Spinner cls="m-auto" />
 		{:then testsByComp}
 			<div>
 				<h3>{testsByComp.length} {label} Opinions found in Mutagenicity Endpoint</h3>
@@ -100,7 +101,7 @@
 	</div>
 	<div>
 		{#await carcinogenicityPromise}
-			<div>Loading</div>
+			<Spinner cls="m-auto" />
 		{:then testsByComp}
 			<div>
 				<h3>{testsByComp.length} {label} Opinions found in Carcinogenicity Endpoint</h3>

@@ -9,6 +9,9 @@
 	export let function_and_uses;
 	export let see_also;
 	export let smiles;
+	export let additional_info;
+
+	console.log('$$props', $$props);
 </script>
 
 <div class="">
@@ -34,7 +37,7 @@
 	</div>
 	<div class="">
 		<h2>Function:</h2>
-		<p class=" p-1 max-h-60 overflow-y-auto">{function_and_uses}</p>
+		<p class=" p-1 max-h-60 overflow-y-auto">{additional_info}</p>
 	</div>
 	<OECDToolbox cas={cas_number?.replace(/-/g, '')} />
 </div>
