@@ -17,7 +17,7 @@
 	// console.log('$$props', $$props);
 	const transformResponse = (e, endpoint) => {
 		const { bindings } = e.results;
-		const { reportData } = transformBindings(bindings, endpoint);
+		const { finalData: reportData } = transformBindings(bindings, endpoint);
 
 		console.log(
 			'reportData',

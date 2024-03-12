@@ -43,14 +43,15 @@ const chemicalIdentityQuery = ({ smiles, cas, inci, label }) => {
 			PREFIX ont: <http://ontologies.vub.be/oecd#>
 
 			SELECT DISTINCT *
-			{
+			WHERE {
+
+				?compound a ont:Compound .
 				?compound rdfs:label ?label .
 				${smilesStr}
 				${casStr}
 				${inciStr}
-				?compound ?pred ?value .
-				?compound ont:additional_info ?additional_info .
-			}
+				?compound ?pred ?value
+			} 
 	`;
 
 	console.log('ret', ret);
@@ -156,7 +157,7 @@ export const transformBindings = (bindings, endpoint = null) => {
 		});
 	// console.log('preresults', preresults);
 
-	const reportData = preresults
+	const finalData = preresults
 		.map((d) => {
 			const defaultValues = getDefaultValues(d.guidelineLabel);
 
@@ -182,5 +183,5 @@ export const transformBindings = (bindings, endpoint = null) => {
 			klimisch_score: klimischScore(d)
 		}));
 
-	return { reportData, preData }
+	return { finalData, preData }
 };

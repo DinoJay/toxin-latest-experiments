@@ -5,7 +5,8 @@
 	import {
 		constructChemicalIdentitPreviewyQuery,
 		constructQuery,
-		getSparqlQueryString
+		getSparqlQueryString,
+		transformBindings
 	} from '$lib/sparql';
 	import Expandable from '$lib/Expandable.svelte';
 	import { casRegex, smilesRegex } from '$lib/chemRegexes';
@@ -16,6 +17,7 @@
 	import DropDown from '$lib/DropDown.svelte';
 	import uniqBy from '$lib/uniqBy';
 	import Spinner from '$lib/Spinner.svelte';
+	import { groups } from '$lib/group';
 
 	let promise;
 
@@ -58,12 +60,33 @@
 				console.log('res Search', res);
 
 				const { bindings } = res?.results;
-				console.log('BIndings', bindings);
-				const data = uniqBy(
-					bindings.map(transformObject).filter((d) => !!d.cas_number),
-					'cas_number'
-				);
+
+				console.log('bindings', bindings);
+
+				const preData = bindings.map(transformObject);
+				const data = groups(preData, (d) => d.cas_number)
+					.map(([key, values]) => ({ key, values }))
+					.map((d) => {
+						const obj = {};
+						d.values.forEach((e) => {
+							const attr = e.pred.substring(e.pred.lastIndexOf('#') + 1);
+							obj[attr] = e.value;
+						});
+						obj.id = d.key;
+						// obj.endpoint = endpoint;
+						// obj.test = d.key;
+						// d.key = undefined;
+						d.values = undefined;
+						// if (obj.guidelineLabel === 'OECD 402') console.log('obj', obj);
+						return obj;
+					});
 				console.log('data', data);
+
+				// uniqBy(
+				// 	bindings.map(transformObject).filter((d) => !!d.cas_number),
+				// 	'cas_number'
+				// );
+				// console.log('data', data);
 				return {
 					...res,
 					data,

@@ -170,7 +170,7 @@
 					(response) => {
 						const { bindings } = response.results;
 
-						const { reportData } = transformBindings(bindings, endpoint);
+						const { finalData: reportData } = transformBindings(bindings, endpoint);
 
 						const data = {
 							...response,

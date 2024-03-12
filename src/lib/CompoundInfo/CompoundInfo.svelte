@@ -8,7 +8,7 @@
 	export let empirical_formula;
 	export let function_and_uses;
 	export let see_also;
-	export let smiles;
+	export let SMILES;
 	export let additional_info;
 
 	console.log('$$props', $$props);
@@ -25,7 +25,7 @@
 			class="border object-contain"
 			height="200"
 			width="200"
-			src={`https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/${smiles}/PNG`}
+			src={`https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/${SMILES}/PNG`}
 			alt="chemical compound"
 		/>
 	</div>
