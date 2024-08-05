@@ -12,7 +12,7 @@
 	export let additional_info;
 	export let data;
 
-	console.log('$$props', $$props);
+	console.log('data', data);
 </script>
 
 <div class="">
@@ -38,7 +38,7 @@
 			{/each}
 		</ul>
 	</div>
-	<OECDToolbox cas={cas_number?.replace(/-/g, '')} />
+	<OECDToolbox cas={data.CAS_number?.replace(/-/g, '')} />
 </div>
 
 <style>

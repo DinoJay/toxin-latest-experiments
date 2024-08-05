@@ -19,7 +19,8 @@
 		.then((res) => res.json())
 		.then((res) => {
 			console.log('res', res);
-			return res.length > 0 ? res[0].ChemId : null;
+			if (res.length === 0) throw new Error('ChemId not found in QSAR Toolbox');
+			return res[0].ChemId;
 		})
 		.then((chemId) => {
 			console.log('chemId', chemId);
