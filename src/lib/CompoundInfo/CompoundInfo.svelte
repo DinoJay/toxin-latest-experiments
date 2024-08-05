@@ -12,6 +12,11 @@
 	export let additional_info;
 	export let data;
 
+	function omit(key, obj) {
+		const { [key]: omitted, ...rest } = obj;
+		return rest;
+	}
+
 	console.log('data', data);
 </script>
 
@@ -33,9 +38,10 @@
 	<div class="">
 		<h2>Characteristics:</h2>
 		<ul class="h-64 overflow-auto">
-			{#each Object.entries(data) as d}
+			{#each Object.entries(omit('additional_info', omit('id', data))) as d}
 				<li><span class="font-bold">{d[0].replaceAll('_', ' ')}</span>: {d[1]}</li>
 			{/each}
+			<li><span class="font-bold">additional info</span>: {data.additional_info}</li>
 		</ul>
 	</div>
 	<OECDToolbox cas={data.CAS_number?.replace(/-/g, '')} />
