@@ -70,6 +70,16 @@
         rr:predicate  ont:INCI ;
         rr:objectMap [ rr:column "\"inci name\"" ; ] ;
     ] ;
+    
+    rr:predicateObjectMap [
+        rr:predicate  ont:trade_names_abbreviations;
+        rr:objectMap [ rr:column "\"trade names and abbreviations\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate  ont:synonyms;
+        rr:objectMap [ rr:column "\"SYNONYMS\"" ; ] ;
+    ] ;
 
     # TODO: Clean up delimiters in chemical names
     # TODO: Clean up delimiters in names and abbreviations
@@ -122,14 +132,19 @@
 
 
     rr:predicateObjectMap [
-        rr:predicate ont:purity ;
+        rr:predicate ont:purity_composition_substance_codes ;
         rr:objectMap [ rr:column "\"purity/composition/substance codes\"" ; ] ;
     ] ;
 
-    # rr:predicateObjectMap [
-    #     rr:predicate ont:impurity ;
-    #     rr:objectMap [ rr:column "\"Impurities/accompanying contaminants\"" ; ] ;
-    # ] ;
+    rr:predicateObjectMap [
+        rr:predicate ont:impurities_accompanying_contaminants ;
+        rr:objectMap [ rr:column "\"impurities/accompanying contaminants\"" ; ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ont:solubility ;
+        rr:objectMap [ rr:column "\"SOLUBILITY\"" ; ] ;
+    ] ;
 
     # rr:predicateObjectMap [
     #     rr:predicate ont:organic_solvents ;
@@ -156,17 +171,17 @@
 
     rr:predicateObjectMap [
         rr:predicate ont:melting_point ;
-        rr:objectMap [ rr:column "\"melting point\"" ; ] ;
+        rr:objectMap [ rr:column "\"melting point celsius\"" ; ] ;
     ] ;
 
     rr:predicateObjectMap [
         rr:predicate ont:boiling_point ;
-        rr:objectMap [ rr:column "\"boiling point\"" ; ] ;
+        rr:objectMap [ rr:column "\"boiling point celsius\"" ; ] ;
     ] ;
 
     rr:predicateObjectMap [
         rr:predicate ont:flash_point ;
-        rr:objectMap [ rr:column "\"flash point\"" ; ] ;
+        rr:objectMap [ rr:column "\"flash point celsius\"" ; ] ;
     ] ;
 
     rr:predicateObjectMap [
@@ -228,10 +243,10 @@
         rr:predicate ont:homogeneity_and_stability ;
         rr:objectMap [ rr:column "\"homogeneity and stability\"" ; ] ;
     ] ;
-    # rr:predicateObjectMap [
-    #     rr:predicate ont:function_and_uses ;
-    #     rr:objectMap [ rr:column "\"function and uses\"" ; ] ;
-    # ] ;
+    rr:predicateObjectMap [
+        rr:predicate ont:function_and_use ;
+        rr:objectMap [ rr:column "\"function and use\"" ; ] ;
+    ] ;
     rr:predicateObjectMap [
         rr:predicate ont:additional_info ;
         rr:objectMap [ rr:column "\"additional specifications\"" ; ] ;

@@ -10,6 +10,7 @@
 	export let see_also;
 	export let SMILES;
 	export let additional_info;
+	export let data;
 
 	console.log('$$props', $$props);
 </script>
@@ -29,15 +30,13 @@
 			alt="chemical compound"
 		/>
 	</div>
-	<h2>Substance identity</h2>
-	<div class="p-1">
-		<p>EC / List no.: {ec_number}</p>
-		<p>CAS no.: {cas_number}</p>
-		<p>Mol. formula: {empirical_formula}</p>
-	</div>
 	<div class="">
-		<h2>Function:</h2>
-		<p class=" p-1 max-h-60 overflow-y-auto">{additional_info}</p>
+		<h2>Characteristics:</h2>
+		<ul class="h-64 overflow-auto">
+			{#each Object.entries(data) as d}
+				<li><span class="font-bold">{d[0].replaceAll('_', ' ')}</span>: {d[1]}</li>
+			{/each}
+		</ul>
 	</div>
 	<OECDToolbox cas={cas_number?.replace(/-/g, '')} />
 </div>

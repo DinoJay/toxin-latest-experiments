@@ -143,7 +143,7 @@
 			{#if res.type === 'compound'}
 				{#each res.data as d}
 					<Panel title={d.label} cls="mb-3" open={res.data.length === 1}>
-						<CompoundInfoWrapper {...d} />
+						<CompoundInfoWrapper {...d} data={d} />
 					</Panel>
 				{/each}
 			{/if}
