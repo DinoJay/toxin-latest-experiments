@@ -116,7 +116,6 @@ export const endpointMaker = (n) => `https://wise.vub.ac.be/fuseki/${n}/sparql`;
 // export const endpointMaker = (n) => `http://localhost:3030/${n}/sparql`;
 export const constructQuery = ({ endpoint, cas = null, inci = null, smiles = null, filters }) => {
 
-	// const selFilter = filters?.find(d => !!d.value)
 
 
 
@@ -125,7 +124,11 @@ export const constructQuery = ({ endpoint, cas = null, inci = null, smiles = nul
 	// console.log(`${endpointMaker(endpoint)}?query=${encodeURIComponent(getSparqlQueryString({ endpoint, cas, inci, smiles }))}&format=json`)
 
 	return fetch(`${endpointMaker(endpoint)}?query=${encodeURIComponent(getSparqlQueryString({ endpoint, cas, inci, smiles }))}&format=json`)
-		.then((res) => res.json())
+		.then((res) => res.json()).then((data) => {
+			console.log('ret data', data);
+			return data;
+
+		})
 }
 
 
@@ -183,5 +186,5 @@ export const transformBindings = (bindings, endpoint = null) => {
 			klimisch_score: klimischScore(d)
 		}));
 
-	return { finalData, preData }
+	return { finalData, preData, preresults }
 };

@@ -25,13 +25,13 @@
 	export let onClick;
 
 	const repeatedDoseExtFilterNames = [
-		{ id: 'gross necropsy: liver', synonyms: [] },
-		{ id: 'histopathology: liver', synonyms: [] },
+		{ id: 'gross necropsy: liver', synonyms: [], var: 'gross_necropsyXliver' },
+		{ id: 'histopathology: liver', synonyms: [], var: 'histopathologyXliver' },
 		{ id: 'alanine aminotransferase', var: 'alanine_aminotransferase', synonyms: ['ALT', 'ALAT'] },
-		{ id: 'aspartate aminotransferase', synonyms: [] },
-		{ id: 'alkaline phosphatase', synonyms: [] },
-		{ id: 'gamma glutamyl transpeptidase', synonyms: [] },
-		{ id: 'sorbitol dehydrogenase', synonyms: [] },
+		{ id: 'aspartate aminotransferase', synonyms: [], var: 'aspartate_aminotransferase' },
+		{ id: 'alkaline phosphatase', synonyms: [], var: 'alkaline_phosphatase' },
+		{ id: 'gamma glutamyl transpeptidase', synonyms: [], var: null },
+		{ id: 'sorbitol dehydrogenase', synonyms: [], var: null },
 		{ id: 'total bilirubin', synonyms: [] },
 		{ id: 'total cholesterol', synonyms: [] },
 		{ id: 'fasting triglycerides', synonyms: [] },
@@ -170,12 +170,23 @@
 					(response) => {
 						const { bindings } = response.results;
 
-						const { finalData: reportData } = transformBindings(bindings, endpoint);
+						const { finalData: reportData, preresults } = transformBindings(bindings, endpoint);
+
+						const selFilters = repeatedDoseToxicityFilters?.filter((d) => !!d.value);
+						console.log('selFilters', selFilters);
+						console.log('reportData', reportData);
+						console.log('preresults', preresults);
+						// const testfiltData = preresults.filter((d) => Object.keys());
+
+						const filteredData = preresults.filter((d) =>
+							Object.keys(d).find((k) => selFilters.find((f) => k.includes(f.var)))
+						);
+						console.log('alanine', filteredData);
 
 						const data = {
 							...response,
 							// preresults,
-							reportData,
+							reportData: selFilters.length ? filteredData : reportData,
 							compoundLabel: response.compoundLabel,
 							oecd,
 							nonOecd,
