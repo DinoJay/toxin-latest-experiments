@@ -85,7 +85,60 @@
 		value: repeatedDoseExtFilterVals[i]
 	}));
 
-	$: console.log('vals', repeatedDoseToxicityFilters);
+	$: console.log('filters', repeatedDoseToxicityFilters);
+	$: getData = () => {
+		console.log('endpoint', endpoint);
+		promise = constructQuery({ endpoint, filters: repeatedDoseToxicityFilters }).then(
+			(response) => {
+				const { bindings } = response.results;
+
+				const { finalData: reportData, preresults } = transformBindings(bindings, endpoint);
+
+				const selFilters = repeatedDoseToxicityFilters?.filter((d) => !!d.value);
+				console.log('selFilters', selFilters);
+				console.log('reportData', reportData);
+				console.log('preresults', preresults);
+				// const testfiltData = preresults.filter((d) => Object.keys());
+
+				const filteredData = preresults
+					.filter(
+						(d) => {
+							const matchedFilters = selFilters.filter((f) => {
+								const fullVarName = Object.keys(d).find((k) => f.var && k.includes(f.var));
+								if (fullVarName) {
+									console.log('fullVarName', fullVarName);
+									return d[fullVarName].includes(f.value);
+								}
+								return undefined;
+							});
+							return matchedFilters.length === selFilters.length;
+						}
+
+						// Object.keys(d).find((k) => selFilters.find((f) => k.includes(f.var)))
+					)
+					.map((d) => reportData.find((e) => e.id === d.id));
+
+				// console.log('alanine', filteredData);
+
+				const data = {
+					...response,
+					// preresults,
+					reportData: selFilters.length ? filteredData : reportData,
+					compoundLabel: response.compoundLabel,
+					oecd,
+					nonOecd,
+					invivo,
+					invitro,
+					insilico,
+					inchemico,
+					endpoint,
+					type: 'health-effect'
+				};
+				console.log('DATA', data);
+				return data;
+			}
+		);
+	};
 </script>
 
 <h2 class="text-xl">Health Effect</h2>
@@ -162,47 +215,7 @@
 			</div>
 		{/if}
 
-		<button
-			class="mt-3 border px-2 py-1 w-full "
-			on:click={() => {
-				console.log('endpoint', endpoint);
-				promise = constructQuery({ endpoint, filters: repeatedDoseToxicityFilters }).then(
-					(response) => {
-						const { bindings } = response.results;
-
-						const { finalData: reportData, preresults } = transformBindings(bindings, endpoint);
-
-						const selFilters = repeatedDoseToxicityFilters?.filter((d) => !!d.value);
-						console.log('selFilters', selFilters);
-						console.log('reportData', reportData);
-						console.log('preresults', preresults);
-						// const testfiltData = preresults.filter((d) => Object.keys());
-
-						const filteredData = preresults.filter((d) =>
-							Object.keys(d).find((k) => selFilters.find((f) => k.includes(f.var)))
-						);
-						console.log('alanine', filteredData);
-
-						const data = {
-							...response,
-							// preresults,
-							reportData: selFilters.length ? filteredData : reportData,
-							compoundLabel: response.compoundLabel,
-							oecd,
-							nonOecd,
-							invivo,
-							invitro,
-							insilico,
-							inchemico,
-							endpoint,
-							type: 'health-effect'
-						};
-						console.log('DATA', data);
-						return data;
-					}
-				);
-			}}>Go</button
-		>
+		<button class="mt-3 border px-2 py-1 w-full " on:click={getData}>Go</button>
 	</form>
 </div>
 
