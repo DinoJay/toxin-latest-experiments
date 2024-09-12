@@ -20,25 +20,43 @@
 	import CompoundList from './CompoundList.svelte';
 	import set from 'lodash.set';
 	import klimischScore from '$lib/klimischScore';
+	import {
+		alanine_aminotransferase,
+		alkaline_phosphatase,
+		aspartate_aminotransferase,
+		fasting_triglycerides,
+		gamma_glutamyl_transpeptidase,
+		gross_necropsy_liver,
+		high_density_lipoprotein,
+		histopathology_liver,
+		low_density_lipoprotein,
+		sorbitol_dehydrogenase,
+		total_bilirubin,
+		total_cholesterol,
+		total_protein,
+		albumin
+	} from './filterDict';
+	import filterDict from './filterDict';
+
 	export let openId;
 	let promise;
 	export let onClick;
 
 	const repeatedDoseExtFilterNames = [
-		{ id: 'gross necropsy: liver', synonyms: [], var: 'gross_necropsyXliver' },
-		{ id: 'histopathology: liver', synonyms: [], var: 'histopathologyXliver' },
-		{ id: 'alanine aminotransferase', var: 'alanine_aminotransferase', synonyms: ['ALT', 'ALAT'] },
-		{ id: 'aspartate aminotransferase', synonyms: [], var: 'aspartate_aminotransferase' },
-		{ id: 'alkaline phosphatase', synonyms: [], var: 'alkaline_phosphatase' },
-		{ id: 'gamma glutamyl transpeptidase', synonyms: [], var: null },
-		{ id: 'sorbitol dehydrogenase', synonyms: [], var: null },
-		{ id: 'total bilirubin', synonyms: [] },
-		{ id: 'total cholesterol', synonyms: [] },
-		{ id: 'fasting triglycerides', synonyms: [] },
-		{ id: 'high-density lipoprotein (hdl)', synonyms: [] },
-		{ id: 'low-density lipoprotein (ldl)', synonyms: [] },
-		{ id: 'total protein', synonyms: [] },
-		{ id: 'albumin', synonyms: [] }
+		{ id: gross_necropsy_liver, synonyms: [], var: 'gross_necropsyXliver' },
+		{ id: histopathology_liver, synonyms: [], var: 'histopathologyXliver' },
+		{ id: alanine_aminotransferase, var: 'alanine_aminotransferase', synonyms: ['ALT', 'ALAT'] },
+		{ id: aspartate_aminotransferase, synonyms: [], var: 'aspartate_aminotransferase' },
+		{ id: alkaline_phosphatase, synonyms: [], var: 'alkaline_phosphatase' },
+		{ id: gamma_glutamyl_transpeptidase, synonyms: [], var: null },
+		{ id: sorbitol_dehydrogenase, synonyms: [], var: null },
+		{ id: total_bilirubin, synonyms: [] },
+		{ id: total_cholesterol, synonyms: [] },
+		{ id: fasting_triglycerides, synonyms: [] },
+		{ id: high_density_lipoprotein, synonyms: [] },
+		{ id: low_density_lipoprotein, synonyms: [] },
+		{ id: total_protein, synonyms: [] },
+		{ id: albumin, synonyms: [] }
 	];
 
 	const data = [
@@ -104,12 +122,19 @@
 					.filter(
 						(d) => {
 							const matchedFilters = selFilters.filter((f) => {
-								const fullVarName = Object.keys(d).find((k) => f.var && k.includes(f.var));
+								const filterObj = filterDict.find((e) => e.id === f.id);
+								const filterList = filterObj?.[d.guideline];
+								console.log('filterList', filterList);
+
+								const fullVarName = Object.keys(d).find((k) => {
+									return filterList?.find((v) => k.includes(v));
+								});
+								console.log('fullVarName', fullVarName);
 								if (fullVarName) {
-									console.log('fullVarName', fullVarName);
-									return d[fullVarName].includes(f.value);
+									return d?.[fullVarName].includes(f.value);
 								}
-								return undefined;
+								return false;
+								// return undefined;
 							});
 							return matchedFilters.length === selFilters.length;
 						}
