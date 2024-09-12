@@ -43,20 +43,66 @@
 	export let onClick;
 
 	const repeatedDoseExtFilterNames = [
-		{ id: gross_necropsy_liver, synonyms: [], var: 'gross_necropsyXliver' },
-		{ id: histopathology_liver, synonyms: [], var: 'histopathologyXliver' },
-		{ id: alanine_aminotransferase, var: 'alanine_aminotransferase', synonyms: ['ALT', 'ALAT'] },
-		{ id: aspartate_aminotransferase, synonyms: [], var: 'aspartate_aminotransferase' },
-		{ id: alkaline_phosphatase, synonyms: [], var: 'alkaline_phosphatase' },
-		{ id: gamma_glutamyl_transpeptidase, synonyms: [], var: null },
-		{ id: sorbitol_dehydrogenase, synonyms: [], var: null },
-		{ id: total_bilirubin, synonyms: [] },
-		{ id: total_cholesterol, synonyms: [] },
-		{ id: fasting_triglycerides, synonyms: [] },
-		{ id: high_density_lipoprotein, synonyms: [] },
-		{ id: low_density_lipoprotein, synonyms: [] },
-		{ id: total_protein, synonyms: [] },
-		{ id: albumin, synonyms: [] }
+		{ id: gross_necropsy_liver, synonyms: [], label: 'Gross Necropsy Liver' },
+		{ id: histopathology_liver, synonyms: [], label: 'Histopathology Liver' },
+		{ id: alanine_aminotransferase, label: 'Alanine Aminotransferase', synonyms: ['ALT', 'ALAT'] },
+		{
+			id: aspartate_aminotransferase,
+			label: 'Aspartate Aminotransferase',
+			synonyms: [],
+			var: 'aspartate_aminotransferase'
+		},
+		{
+			id: alkaline_phosphatase,
+			synonyms: [],
+			label: 'Alkaline Phosphotase',
+			var: 'alkaline_phosphatase'
+		},
+		{
+			id: gamma_glutamyl_transpeptidase,
+			label: 'Gamma Glutamyl Transpeptidase',
+			synonyms: [],
+			var: null
+		},
+		{
+			id: sorbitol_dehydrogenase,
+			label: 'Sorbitol Dehydrogenase',
+			synonyms: [],
+			var: null
+		},
+		{
+			id: total_bilirubin,
+			label: 'Total Bilirubin',
+			synonyms: []
+		},
+		{
+			id: total_cholesterol,
+			label: 'Total Cholesterol',
+			synonyms: []
+		},
+		{
+			id: fasting_triglycerides,
+			label: 'Fasting Triglycerides',
+
+			synonyms: []
+		},
+		{
+			id: high_density_lipoprotein,
+			label: 'High Density Lipoprotein',
+			synonyms: []
+		},
+		{
+			id: low_density_lipoprotein,
+			label: 'Low Density Lipoprotein',
+			synonyms: []
+		},
+		{
+			id: total_protein,
+			label: 'Total Protein',
+
+			synonyms: []
+		},
+		{ id: albumin, label: 'Albumin', synonyms: [] }
 	];
 
 	const data = [
@@ -226,7 +272,7 @@
 			<div class="h-32 overflow-y-auto">
 				{#each repeatedDoseExtFilterNames as filter, i}
 					<div class="flex mb-3">
-						<label class="crop-text" for="non-oecd">{filter.id}</label>
+						<label class="crop-text" for="non-oecd">{filter.label}</label>
 						<input
 							bind:value={repeatedDoseExtFilterVals[i]}
 							placeholder="Enter search string"
